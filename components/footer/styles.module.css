@@ -1,0 +1,55 @@
+.footerMain {
+    margin-top: 30px;
+    font: normal 12px Arial, Helvetica, sans-serif;
+}
+.footerNavH4 {
+    font-size: 14px;
+    border-bottom: 2px solid #c1b8ad;
+    padding-bottom: 3px;
+    margin-bottom: 5px;
+    color: #c1b8ad;
+    font-weight: 700;
+}
+.textLeft {
+    text-align: left;
+}
+.footerText {
+    padding-top: 10px;
+    border-top: 1px solid #181c23;
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+.footerNavUlLi {
+    margin-bottom: 5px;
+}
+
+.footerNavA {
+    color: #777;
+}
+
+.footerNavA:focus,
+.footerNavA:hover {
+    color: #c1b8ad;
+    text-decoration: none;
+}
+
+.verticalAlign {
+    vertical-align: inherit
+}
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: "Glyphicons Halflings";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.colMd3 {
+position: relative;
+min-height: 1px;
+padding-right: 15px;
+padding-left: 15px;
+}
