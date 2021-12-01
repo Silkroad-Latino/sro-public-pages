@@ -1201,9 +1201,6 @@ footer.main {
 .imgbox:hover {
   border-color: #c1b8ad;
 }
-.page-container {
-  margin-top: 40px;
-}
 .normal-content {
   background: #1f252c url(/assets/img/content-top.jpg) top right no-repeat;
   border: 1px solid #777;
