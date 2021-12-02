@@ -14,7 +14,7 @@ const SeekerComponent = () => {
           </span>
           <input
             type="text"
-            className="form-control grunge search"
+            className={`form-control ${styles.grunge} search`}
             pattern=".{3,}"
             required
             title="Minimo 3 letras"

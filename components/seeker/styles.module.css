@@ -60,3 +60,12 @@
     box-shadow: 0 2px 3px rgb(0 0 0 / 50%);
     background: url(/assets/img/login-submit.png) 0 -7px repeat-x;
 }
+.grunge {
+    border-radius: 0;
+    border: 1px solid #666;
+    border-bottom: 1px solid #555;
+    background-color: #111;
+    color: #777;
+    box-shadow: 0 2px 3px #000, inset 0 0 5px #000;
+    outline: 0;
+}

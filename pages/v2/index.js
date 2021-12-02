@@ -6,6 +6,7 @@ import SliderComponent from "../../components/slider";
 import DonationComponent from "../../components/donation";
 import HourComponent from "../../components/hour";
 import SeekerComponent from "../../components/seeker";
+import StatusComponent from "../../components/status";
 
 export default function V2() {
     return (
@@ -17,7 +18,9 @@ export default function V2() {
               <LoginComponent/>
                 <div className="row">
                   <div className="col-md-12 sub-spot">
+
                     <div className="col-md-4 col-lg-3 no-padding-all">
+
                       <div className="rank-tabs">
                         <ul id="myTab" className="nav nav-pills sub-spot-title-list">
                           <li className="sub-spot-title">
@@ -343,30 +346,14 @@ export default function V2() {
                           </div>
                         </div>
                       </div>
+
                     </div>
 
                     <div className="col-md-5 col-lg-6">
 
                       <SeekerComponent/>
 
-                      <div className="server-status">
-                        <div className="col-md-3 estatus text-success">Alfa</div>
-                        <div className="col-md-9">
-                          <div className="progress grunge">
-                            <div
-                              className="progress-bar"
-                              role="progressbar"
-                              aria-valuenow="43.875"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                              style={{
-                                "width": "43.875%",
-                              }}>
-                              1755/4000
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <StatusComponent/>
 
                     </div>
 
