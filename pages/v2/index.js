@@ -4,6 +4,7 @@ import FooterComponent from "../../components/footer";
 import LoginComponent from "../../components/login";
 import SliderComponent from "../../components/slider";
 import DonationComponent from "../../components/donation";
+import HourComponent from "../../components/hour";
 
 export default function V2() {
     return (
@@ -384,23 +385,7 @@ export default function V2() {
 
                     </div>
 
-                    <div className="col-md-3 no-padding-all time">
-                      <ul id="myTab" className="nav nav-pills sub-spot-title-list">
-                        <li className="sub-spot-title">
-                          <h4>TIEMPO DEL SERVIDOR</h4>
-                        </li>
-                      </ul>
-
-                      <p id="servertime">
-                        <font style={{
-                          " verticalAlign": "inherit",
-                        }}>
-                          <font style={{
-                            " verticalAlign": "inherit",
-                          }}>21:28:41 (UTC-5)</font>
-                        </font>
-                      </p>
-                    </div>
+                    <HourComponent/>
 
 
                     <div className="col-md-5 col-lg-6">
