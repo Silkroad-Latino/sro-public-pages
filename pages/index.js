@@ -612,20 +612,20 @@ export default function Home() {
                             <div className="col-md-5 col-lg-6">
                                 <form method="POST" action="https://www.alfa.srolatino-servers.com/search">
                                     <div className="input-group">
-									<span className="input-group-btn">
-										<select rquired="" className="btn grunge" name="by">
-											<option value="player">Jugador</option>
-											<option value="guild">Clan</option>
-										</select>
-									</span>
+                                      <span className="input-group-btn">
+                                        <select rquired="" className="btn grunge" name="by">
+                                          <option value="player">Jugador</option>
+                                          <option value="guild">Clan</option>
+                                        </select>
+                                      </span>
                                         <input pattern=".{3,}" required="" title="Minimo 3 letras" type="text" name="s"
                                                className="form-control grunge search"
                                                placeholder="Buscar un jugador o clan"/>
                                         <span className="input-group-btn">
-										<button className="btn btn-grunge" type="submit">
-											<span className="glyphicon glyphicon-search"></span>
-										</button>
-									</span>
+                                            <button className="btn btn-grunge" type="submit">
+                                              <span className="glyphicon glyphicon-search"></span>
+                                            </button>
+                                        </span>
                                     </div>
                                 </form>
 
