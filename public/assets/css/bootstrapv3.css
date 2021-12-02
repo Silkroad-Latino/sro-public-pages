@@ -7174,7 +7174,7 @@ p > span.rank-5 {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(0, 0, 0, 0.6);
   text-align: center;
 }
-.item-group > h5 {
+.item-group >h5 {
   margin: 0 0 5px;
   padding: 0;
   border-radius: 5px;
