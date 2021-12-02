@@ -1,0 +1,166 @@
+.spotRight {
+    margin-top: 30px;
+}
+.downloadButton {
+    margin-top: -10px;
+    color: #ccc;
+    font-family: AdelonMedium, serif;
+    font-size: 22px;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 26px;
+    text-shadow: 0 1px 5px rgb(0 0 0 / 80%);
+    padding: 15px 0;
+    display: block;
+    background: #968872;
+    background: -moz-linear-gradient(
+            top,
+            #968872 0,
+            #766e63 50%,
+            #68604f 50%,
+            #58524d 100%
+    );
+    background: -webkit-linear-gradient(
+            top,
+            #968872 0,
+            #766e63 50%,
+            #68604f 50%,
+            #58524d 100%
+    );
+    background: linear-gradient(
+            to bottom,
+            #968872 0,
+            #766e63 50%,
+            #68604f 50%,
+            #58524d 100%
+    );
+    width: 100%;
+    margin-bottom: 5px;
+    text-align: center;
+    border: 0;
+    box-shadow: 0 0 0 1px #000, 0 0 0 2px #777, 0 3px 3px #000;
+}
+.downloadButton:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: "Glyphicons Halflings";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.loginCont {
+    padding: 0;
+    background-color: #181c23;
+    float: none;
+}
+
+.frame {
+    border: 1px solid #777;
+    box-shadow: 0 1px 3px #000;
+    background: #181c23;
+}
+
+.frameInner {
+    padding: 15px 15px 5px;
+    box-shadow: inset 0 0 10px rgb(0 0 0 / 90%);
+    border-left: 1px solid #101010;
+    border-right: 1px solid #101010;
+    border-bottom: 1px solid #101010;
+}
+
+.formGroup {
+    margin-bottom: 15px;
+}
+.narrow {
+    margin-bottom: 5px;
+}
+.formControl {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.grunge {
+    border-radius: 0;
+    border: 1px solid #666;
+    border-bottom: 1px solid #555;
+    background-color: #111;
+    color: #777;
+    box-shadow: 0 2px 3px #000, inset 0 0 5px #000;
+    outline: 0;
+}
+
+.btnBlock {
+    display: block;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.btnGrunge,
+.btnGrunge:active,
+.btnGrunge:focus,
+.btnGrunge:hover,
+.btnGrunge:target {
+    width: 100%;
+    border-radius: 0;
+    overflow: hidden;
+    border-radius: 1px;
+    color: #222228;
+    font-family: AdelonMedium, serif;
+    text-transform: uppercase;
+    text-shadow: 0 1px 3px rgb(255 255 255 / 10%);
+    box-shadow: 0 2px 3px rgb(0 0 0 / 50%);
+    background: url(/assets/img/login-submit.png) 0 -7px repeat-x;
+}
+
+.a {
+    text-shadow: 0 1px 0 #000;
+    color: #888;
+    background: 0 0;
+    text-decoration: none;
+}
+
+.a:hover{
+    text-decoration: none;
+    color: #bcbcbc;
+}

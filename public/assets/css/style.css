@@ -529,9 +529,7 @@ a.download-button {
   border-right: 1px solid #101010;
   border-bottom: 1px solid #101010;
 }
-.form-group.narrow {
-  margin-bottom: 5px;
-}
+
 .form-group {
   margin-bottom: 15px;
 }
@@ -582,12 +580,7 @@ a.download-button {
   box-shadow: 0 2px 3px rgb(0 0 0 / 50%);
   background: url(/assets/img/login-submit.png) 0 -7px repeat-x;
 }
-.btn-block {
-  display: block;
-  width: 100%;
-  padding-right: 0;
-  padding-left: 0;
-}
+
 .btn {
   display: inline-block;
   padding: 6px 12px;
