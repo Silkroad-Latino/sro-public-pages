@@ -1,0 +1,56 @@
+.bxWrapper {
+    position: relative;
+    margin: 0 auto 60px;
+    padding: 0;
+    maxWidth: 100%,;
+    margin: 0px auto;
+}
+.bxViewport{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 320px;
+}
+
+.bxSlider{
+    width: auto;
+    position: relative;
+}
+
+
+.divStyle{
+    float: none;
+    list-style: none;
+    position: absolute;
+    display: none;
+    width: 848px;
+    z-index: 0;
+}
+
+.imgSlider{
+    max-width: 100%;
+    display: block;
+
+}
+
+.sliderA{
+    color: #888;
+    text-shadow: 0 1px 1px #000;
+    text-decoration: none;
+    background: 0 0;
+}
+
+.bxControlsA {
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    outline: 0;
+    width: 72px;
+    height: 72px;
+    text-indent: -9999px;
+    z-index: 9999;
+}
+
+.verticalAlign {
+    vertical-align: inherit
+}

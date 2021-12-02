@@ -235,6 +235,7 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
+
                         <div className="col-md-3 spot-right">
                             <a href="https://www.alfa.srolatino-servers.com/download" className="download-button">
                                 <span className="glyphicon glyphicon-cloud-download"></span>

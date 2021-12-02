@@ -2,6 +2,7 @@ import styles from './styles.module.css'
 import NavbarComponent from "../../components/navbar";
 import FooterComponent from "../../components/footer";
 import LoginComponent from "../../components/login";
+import SliderComponent from "../../components/slider";
 
 export default function V2() {
     return (
@@ -12,7 +13,7 @@ export default function V2() {
                 width: 1170,
                 height: 1522,
                  }}>
-
+              <SliderComponent/>
               <LoginComponent/>
             </div>
 
