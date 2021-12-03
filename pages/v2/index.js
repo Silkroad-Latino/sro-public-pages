@@ -10,6 +10,7 @@ import StatusComponent from "../../components/status";
 import RankingComponent from "../../components/ranking";
 import LogActivities from "../../components/log";
 import ListGroup from "../../components/list_group";
+import GmsComponent from "../../components/gms";
 
 export default function V2() {
     return (
@@ -48,85 +49,7 @@ export default function V2() {
                 <div className="col-md-2 no-padding-left">
                     <ListGroup/>
 
-                    <div className="sidebar-imgbox fortress-war gms-online">
-                      <p>
-                        <strong>GMs</strong>
-                        En Linea
-                      </p>
-                      <div className="fortress">
-                        <p>
-                          <span
-                            className="green-circle"style={{ "backgroundColor": "#A7A7A7" }}>
-                          </span>
-                            <span className="gms-name">
-                              <font style={{"verticalAlign": "inherit"}}>
-                                <font style={{"verticalAlign": "inherit"}}>
-                                  [GM] xMileZ
-                                </font>
-                              </font>
-                            </span>
-                          </p>
-
-                          <p>
-                            <span className="green-circle"
-                              style={{"backgroundColor": "#A7A7A7"}}>
-                            </span>
-                            <span className="gms-name">
-                              <font
-                                style={{"verticalAlign": "inherit"}}>
-                                <font
-                                  style={{"verticalAlign": "inherit"}}>
-                                  [GM] Grito
-                                </font>
-                              </font>
-                            </span>
-                          </p>
-
-                          <p>
-                            <span className="green-circle"></span>
-                            <span className="gms-name">
-                              <font style={{"verticalAlign": "inherit"}}>
-                                <font style={{"verticalAlign": "inherit"}}>
-                                  [GM] Rubia
-                                </font>
-                              </font>
-                            </span>
-                          </p>
-
-                          <p>
-                            <span className="green-circle"></span>
-                            <span className="gms-name">
-                              <font style={{"verticalAlign": "inherit"}}>
-                                <font style={{"verticalAlign": "inherit"}}>
-                                  [GM] No
-                                </font>
-                              </font>
-                            </span>
-                          </p>
-
-                          <p>
-                            <span className="green-circle" style={{"backgroundColor": "#A7A7A7"}}></span>
-                            <span className="gms-name">
-                              <font style={{"verticalAlign": "inherit"}}>
-                                <font style={{"verticalAlign": "inherit"}}>
-                                  [GM] Celes
-                                </font>
-                              </font>
-                            </span>
-                          </p>
-
-                          <p>
-                            <span className="green-circle"></span>
-                            <span className="gms-name">
-                                <font style={{"verticalAlign": "inherit"}}>
-                                  <font style={{"verticalAlign": "inherit"}}>
-                                    [GM] Keila
-                                  </font>
-                                </font>
-                            </span>
-                          </p>
-                      </div>
-                    </div>
+                    <GmsComponent/>
 
                     <div className="frame" id="discordapp"
                          style={{"overflow": "hidden","margin": "5px auto",}}>
