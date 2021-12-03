@@ -14,6 +14,7 @@ import GmsComponent from "../../components/gms";
 import DiscordComponent from "../../components/discord";
 import NewsComponent from "../../components/news";
 import React from "react";
+import FortressComponent from "../../components/fortress";
 
 export default function V2() {
     return (
@@ -66,23 +67,7 @@ export default function V2() {
                 <div className="col-md-3">
                 <div className="row">
                   <div className="col-md-12 no-padding-all">
-                    <div className="sidebar-imgbox fortress-war">
-                      <p>Fortress War<br/> Miercoles / Domingo 17:30</p>
-                      <div className="fortress">
-                        <p>
-                          <span className="icon-fortress hotan">B</span> <span
-                          className="fortress-name">Hotan:</span>
-                          <span className="pull-right"><a
-                            href="https://www.alfa.srolatino-servers.com/guild/UnitedBrooS">UnitedBrooS</a> (10%)</span>
-                        </p>
-                        <p>
-                          <span className="icon-fortress bandit">H</span> <span
-                          className="fortress-name">Bandit:</span>
-                          <span className="pull-right"><a
-                            href="https://www.alfa.srolatino-servers.com/guild/AnGeLs_DeMoN">AnGeLs_DeMoN</a> (10%)</span>
-                        </p>
-                      </div>
-                    </div>
+                   <FortressComponent/>
                     <div className="event-times">
                       <ul id="myTab" className="nav nav-pills sub-spot-title-list">
                         <li className="sub-spot-title">
