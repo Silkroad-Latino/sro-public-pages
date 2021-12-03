@@ -16,6 +16,7 @@ import NewsComponent from "../../components/news";
 import React from "react";
 import FortressComponent from "../../components/fortress";
 import EventsComponent from "../../components/events";
+import ScreenComponent from "../../components/screenshots";
 
 export default function V2() {
     return (
@@ -66,44 +67,13 @@ export default function V2() {
                   </div>
                 </div>
                 <div className="col-md-3">
-                <div className="row">
-                  <div className="col-md-12 no-padding-all">
-                   <FortressComponent/>
-                   <EventsComponent/>
-                  </div>
-
-                  <div className="screenshots-home">
-                    <ul id="myTab" className="nav nav-pills sub-spot-title-list">
-                      <li className="sub-spot-title">
-                        <h4>IMAGEN DE LA SEMANA</h4>
-                      </li>
-                    </ul>
-
-                    <div
-                      className="sidebar-imgbox screenshots"
-                      style={{
-                        "backgroundImage": "url(https://www.alfa.srolatino-servers.com//uploads/pictures/2021/46/9e1104218cbc80b06a325f882f4c93913514e6ad.jpg)",
-                      }}>
-                      <a href="https://www.alfa.srolatino-servers.com//pictures/pic/2021/46"
-                         className="link"></a>
-                      <br/>
-                      <div className="links">
-									<span className="pull-left">
-										<a href="https://www.alfa.srolatino-servers.com/pictures/upload">
-											<span className="glyphicon glyphicon-cloud-upload"></span>Enviar Imagen
-										</a>
-									</span>
-
-                        <span className="pull-right">
-										<a href="https://www.alfa.srolatino-servers.com/pictures">
-											Todas Las Imagenes
-											<span className="glyphicon glyphicon-arrow-right"></span>
-										</a>
-									</span>
-                      </div>
+                  <div className="row">
+                    <div className="col-md-12 no-padding-all">
+                       <FortressComponent/>
+                       <EventsComponent/>
                     </div>
+                      <ScreenComponent/>
                   </div>
-                </div>
               </div>
             </div>
 
