@@ -939,14 +939,14 @@ export default function Home() {
                                 <p>
                                     <span className="green-circle"></span>
                                     <span className="gms-name">
-                                        <font style={{
+									                  <font style={{
+                                        " verticalAlign": "inherit",
+                                    }}>
+										                <font style={{
                                             " verticalAlign": "inherit",
-                                        }}>
-                                        <font style={{
-                                                " verticalAlign": "inherit",
-                                            }}>[GM] Keila</font>
-                                        </font>
-								                    </span>
+                                        }}>[GM] Keila</font>
+									                  </font>
+								</span>
                                 </p>
                             </div>
                         </div>
@@ -966,7 +966,6 @@ export default function Home() {
                     <div className="col-md-7 no-padding-left">
                         <div className="list-group news">
                             <div className="col-md-10 col-md-offset-2 no-padding-all">
-
                                 <a href="https://www.alfa.srolatino-servers.com/blog/updates/06012021-INSPECCION-COMPLETADA-96"
                                    className="list-group-item">
                                     <div

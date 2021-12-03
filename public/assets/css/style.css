@@ -752,7 +752,12 @@ a {
   color: #c1b8ad;
 }
 
-
+.badge.lv {
+  font-size: 11px;
+  margin-right: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #999;
+}
 .fortress {
   background: rgba(0, 0, 0, 0.85);
   padding: 5px 10px;
