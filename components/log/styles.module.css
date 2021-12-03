@@ -58,7 +58,17 @@
 .textLeft {
     text-align: left;
 }
-
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 .itemGroup >h5 {
     margin: 0 0 5px;
     padding: 0;
@@ -67,7 +77,59 @@
     text-shadow: 0 1px 1px #000;
     text-align: center;
 }
-
+.shellWrap {
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(0, 0, 0, 0.6);
+}
+.shellBody {
+    margin: 0;
+    padding: 5px;
+    list-style: none;
+    background: #141414;
+    font: 12px 'Andale Mono',Consolas,'Courier New';
+    line-height: 1.6em;
+    color: #45d40c;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    overflow: auto;
+    height: 60px;
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: left;
+}
+.shellBody li:before {
+    content: "$";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.shellBody li {
+    word-wrap: break-word;
+    position: relative;
+    padding: 0 0 0 15px;
+    width: 95%;
+}
+.shellBody li a {
+    text-decoration: none;
+    color: #45d40c;
+    font: 11px "Andale Mono", Consolas, "Courier New";
+}
+.shellBody li a:hover {
+    color: #fff;
+    -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+}
+.shellBody::-webkit-scrollbar {
+    width: 5px;
+}
+.shellBody::-webkit-scrollbar-thumb {
+    background-color: #464b50;
+}
+.shellBody::-webkit-scrollbar-button {
+    height: 100%;
+}
 .verticalAlign {
     vertical-align: inherit
 }
+

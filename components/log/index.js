@@ -16,13 +16,13 @@ const LogActivities = () => {
                 Log De Actividades
                 <a href="https://www.alfa.srolatino-servers.com/community/activity_logs">
                   <small>
-                    <span className="glyphicon glyphicon-new-window"></span>
+                    <span className={`${styles.glyphicon} glyphicon-new-window`}></span>
                   </small>
                 </a>
               </h5>
 
-              <div className="shell-wrap">
-                <ul className="shell-body">
+              <div className={styles.shellWrap}>
+                <ul className={styles.shellBody}>
                   <li>
                     <a href="#">
                       <font className={styles.verticalAlign}>

@@ -1813,10 +1813,7 @@ ul.rankings-nav > li > a > span.img.unique {
     margin-bottom: 5px;
   }
 }
-.shell-wrap {
-  background: rgba(0, 0, 0, 0.4);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(0, 0, 0, 0.6);
-}
+
 .shell-top-bar {
   color: #c1b8ad;
   text-shadow: 0 1px 1px #000;
@@ -1832,58 +1829,7 @@ ul.rankings-nav > li > a > span.img.unique {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
-.shell-body {
-  margin: 0;
-  padding: 5px;
-  list-style: none;
-  background: #141414;
-  font: 12px "Andale Mono", Consolas, "Courier New";
-  line-height: 1.6em;
-  color: #45d40c;
-  -webkit-border-bottom-right-radius: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -moz-border-radius-bottomright: 3px;
-  -moz-border-radius-bottomleft: 3px;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
-  overflow: auto;
-  height: 60px;
-  display: flex;
-  flex-direction: column-reverse;
-  text-align: left;
-}
-.shell-body li:before {
-  content: "$";
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-.shell-body li {
-  word-wrap: break-word;
-  position: relative;
-  padding: 0 0 0 15px;
-  width: 95%;
-}
-.shell-body li a {
-  text-decoration: none;
-  color: #45d40c;
-  font: 11px "Andale Mono", Consolas, "Courier New";
-}
-.shell-body li a:hover {
-  color: #fff;
-  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
-  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
-  animation: neon1 1.5s ease-in-out infinite alternate;
-}
-.shell-body::-webkit-scrollbar {
-  width: 5px;
-}
-.shell-body::-webkit-scrollbar-thumb {
-  background-color: #464b50;
-}
-.shell-body::-webkit-scrollbar-button {
-  height: 100%;
-}
+
 @-webkit-keyframes neon1 {
   from {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #f17,
