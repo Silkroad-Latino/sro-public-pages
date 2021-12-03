@@ -488,10 +488,7 @@ a.download-button {
   background-color: #181c23;
   float: none;
 }
-.frame {
-  border: 1px solid #777;
-  box-shadow: 0 1px 3px #000;
-}
+
 .frame-inner {
   padding: 15px 15px 5px;
   box-shadow: inset 0 0 10px rgb(0 0 0 / 90%);

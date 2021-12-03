@@ -11,6 +11,7 @@ import RankingComponent from "../../components/ranking";
 import LogActivities from "../../components/log";
 import ListGroup from "../../components/list_group";
 import GmsComponent from "../../components/gms";
+import DiscordComponent from "../../components/discord";
 
 export default function V2() {
     return (
@@ -47,17 +48,18 @@ export default function V2() {
                   </div>
 
                 <div className="col-md-2 no-padding-left">
-                    <ListGroup/>
-
-                    <GmsComponent/>
-
-                    <div className="frame" id="discordapp"
-                         style={{"overflow": "hidden","margin": "5px auto",}}>
-                      <iframe src="https://discordapp.com/widget?id=408379216862773248&amp;theme=dark"
-                              width="100%"
-                              height="200px" allowTransparency="true" frameBorder="0"/>
-                    </div>
+                  <ListGroup/>
+                  <GmsComponent/>
+                  <DiscordComponent/>
                 </div>
+                <div className="col-md-7 no-padding-left">
+
+                  <div className="col-md-12 no-padding-all">
+                    <a href="https://www.alfa.srolatino-servers.com/blog"
+                       className="btn btn-block btn-grunge-simple" role="button">Mas</a>
+                  </div>
+                </div>
+
             </div>
 
           <FooterComponent />
