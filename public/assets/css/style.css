@@ -673,33 +673,6 @@ a {
 
 /* codigo a refactorizar */
 
-.lg-grunge > a {
-  background: #1f252c;
-  border-color: #777;
-  color: #c1b8ad;
-  margin: 0;
-  border-top: 1px solid #555;
-  border-bottom: 1px solid #151515;
-  text-shadow: 0 1px 1px #000;
-}
-.lg-grunge > a:focus,
-.lg-grunge > a:hover {
-  background: #181c23;
-  color: #c1b8ad;
-  border-top: 1px solid #666;
-  border-bottom: 1px solid #0f0f0f;
-}
-.lg-grunge > a:first-child {
-  border-top: 1px solid #888;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-}
-.lg-grunge > a:last-child {
-  border-bottom: 1px solid #666;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
-  box-shadow: 0 1px 3px #000;
-}
 .post {
   font: normal 13px/1.5 Arial, sans-serif;
   line-height: 2em;
@@ -2219,20 +2192,6 @@ ul.rankings-nav > li > a > span.img.unique {
 }
 
 /* ------------------------------------------------------------------------------------ */
-.lg-grunge > a:first-child {
-  border-top: 1px solid #888;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-}
-.lg-grunge > a {
-  background: #1f252c;
-  border-color: #777;
-  color: #c1b8ad;
-  margin: 0;
-  border-top: 1px solid #555;
-  border-bottom: 1px solid #151515;
-  text-shadow: 0 1px 1px #000;
-}
 
 .fortress-war {
   color: #fff;

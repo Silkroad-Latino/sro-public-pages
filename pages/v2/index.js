@@ -9,6 +9,7 @@ import SeekerComponent from "../../components/seeker";
 import StatusComponent from "../../components/status";
 import RankingComponent from "../../components/ranking";
 import LogActivities from "../../components/log";
+import ListGroup from "../../components/list_group";
 
 export default function V2() {
     return (
@@ -16,33 +17,124 @@ export default function V2() {
             <NavbarComponent/>
 
             <div className="container" >
-              <SliderComponent/>
-              <LoginComponent/>
-                <div className="row">
-                  <div className="col-md-12 sub-spot">
+                  <SliderComponent/>
+                  <LoginComponent/>
+                  <div className="row">
+                    <div className="col-md-12 sub-spot">
 
-                    <div className="col-md-4 col-lg-3 no-padding-all">
+                      <div className="col-md-4 col-lg-3 no-padding-all">
 
-                      <RankingComponent/>
+                        <RankingComponent/>
+
+                      </div>
+
+                      <div className="col-md-5 col-lg-6">
+
+                        <SeekerComponent/>
+
+                        <StatusComponent/>
+
+                      </div>
+
+                      <HourComponent/>
+
+                      <LogActivities/>
+
+                      <DonationComponent/>
 
                     </div>
-
-                    <div className="col-md-5 col-lg-6">
-
-                      <SeekerComponent/>
-
-                      <StatusComponent/>
-
-                    </div>
-
-                    <HourComponent/>
-
-                    <LogActivities/>
-
-                    <DonationComponent/>
-
                   </div>
-            </div>
+
+                <div className="col-md-2 no-padding-left">
+                    <ListGroup/>
+
+                    <div className="sidebar-imgbox fortress-war gms-online">
+                      <p>
+                        <strong>GMs</strong>
+                        En Linea
+                      </p>
+                      <div className="fortress">
+                        <p>
+                          <span
+                            className="green-circle"style={{ "backgroundColor": "#A7A7A7" }}>
+                          </span>
+                            <span className="gms-name">
+                              <font style={{"verticalAlign": "inherit"}}>
+                                <font style={{"verticalAlign": "inherit"}}>
+                                  [GM] xMileZ
+                                </font>
+                              </font>
+                            </span>
+                          </p>
+
+                          <p>
+                            <span className="green-circle"
+                              style={{"backgroundColor": "#A7A7A7"}}>
+                            </span>
+                            <span className="gms-name">
+                              <font
+                                style={{"verticalAlign": "inherit"}}>
+                                <font
+                                  style={{"verticalAlign": "inherit"}}>
+                                  [GM] Grito
+                                </font>
+                              </font>
+                            </span>
+                          </p>
+
+                          <p>
+                            <span className="green-circle"></span>
+                            <span className="gms-name">
+                              <font style={{"verticalAlign": "inherit"}}>
+                                <font style={{"verticalAlign": "inherit"}}>
+                                  [GM] Rubia
+                                </font>
+                              </font>
+                            </span>
+                          </p>
+
+                          <p>
+                            <span className="green-circle"></span>
+                            <span className="gms-name">
+                              <font style={{"verticalAlign": "inherit"}}>
+                                <font style={{"verticalAlign": "inherit"}}>
+                                  [GM] No
+                                </font>
+                              </font>
+                            </span>
+                          </p>
+
+                          <p>
+                            <span className="green-circle" style={{"backgroundColor": "#A7A7A7"}}></span>
+                            <span className="gms-name">
+                              <font style={{"verticalAlign": "inherit"}}>
+                                <font style={{"verticalAlign": "inherit"}}>
+                                  [GM] Celes
+                                </font>
+                              </font>
+                            </span>
+                          </p>
+
+                          <p>
+                            <span className="green-circle"></span>
+                            <span className="gms-name">
+                                <font style={{"verticalAlign": "inherit"}}>
+                                  <font style={{"verticalAlign": "inherit"}}>
+                                    [GM] Keila
+                                  </font>
+                                </font>
+                            </span>
+                          </p>
+                      </div>
+                    </div>
+
+                    <div className="frame" id="discordapp"
+                         style={{"overflow": "hidden","margin": "5px auto",}}>
+                      <iframe src="https://discordapp.com/widget?id=408379216862773248&amp;theme=dark"
+                              width="100%"
+                              height="200px" allowTransparency="true" frameBorder="0"/>
+                    </div>
+                </div>
             </div>
 
           <FooterComponent />

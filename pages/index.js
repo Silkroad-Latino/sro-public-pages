@@ -939,14 +939,14 @@ export default function Home() {
                                 <p>
                                     <span className="green-circle"></span>
                                     <span className="gms-name">
-									<font style={{
-                                        " verticalAlign": "inherit",
-                                    }}>
-										<font style={{
+                                        <font style={{
                                             " verticalAlign": "inherit",
-                                        }}>[GM] Keila</font>
-									</font>
-								</span>
+                                        }}>
+                                        <font style={{
+                                                " verticalAlign": "inherit",
+                                            }}>[GM] Keila</font>
+                                        </font>
+								                    </span>
                                 </p>
                             </div>
                         </div>

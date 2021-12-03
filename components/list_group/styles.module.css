@@ -1,0 +1,41 @@
+.listGroup {
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+.lgGrunge > a {
+    background: #1f252c;
+    border-color: #777;
+    color: #c1b8ad;
+    margin: 0;
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #151515;
+    text-shadow: 0 1px 1px #000;
+}
+.lgGrunge > a:focus,
+.lgGrunge > a:hover {
+    background: #181c23;
+    color: #c1b8ad;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #0f0f0f;
+    text-decoration: none;
+}
+.lgGrunge > a:first-child {
+    border-top: 1px solid #888;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.lgGrunge > a:last-child {
+    border-bottom: 1px solid #666;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    box-shadow: 0 1px 3px #000;
+}
+
+.listGroupItem {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
