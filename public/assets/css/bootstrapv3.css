@@ -480,9 +480,7 @@ small {
 cite {
   font-style: normal;
 }
-.text-left {
-  text-align: left;
-}
+
 .text-right {
   text-align: right;
 }
@@ -6269,55 +6267,7 @@ a:hover {
   border: 1px solid #777;
   box-shadow: 0 1px 3px #000;
 }
-.corner-box {
-  width: 100%;
-  height: auto;
-  overflow: auto;
-  border: 1px solid #777;
-  box-shadow: inset 0 0 20px #18150e;
-  padding: 7px 10px;
-  background: url(/assets/img/box-bg.jpg) #1b222a no-repeat;
-  color: #777;
-}
-.corner-box > h4 {
-  color: #c1b8ad;
-  font-family: AdelonMedium, serif;
-  text-transform: uppercase;
-  text-shadow: 0 1px 2px #000;
-  margin: 10px 0 3px;
-}
-.corner-box > .separator-box {
-  height: 2px;
-  border-radius: 3px;
-  background: #666;
-  width: 100%;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-}
-.corner-box .corner {
-  position: absolute;
-  width: 38px;
-  height: 41px;
-  background: url(/assets/img/box-corners-2.png) no-repeat;
-}
-.corner-box .corner.tl {
-  top: -4px;
-  left: 6px;
-}
-.corner-box .corner.tr {
-  top: -4px;
-  right: 6px;
-  background-position: -37px 0;
-}
-.corner-box .corner.bl {
-  bottom: -5px;
-  left: 6px;
-  background-position: 0 -41px;
-}
-.corner-box .corner.br {
-  bottom: -5px;
-  right: 6px;
-  background-position: -37px -41px;
-}
+
 .frame-inner {
   padding: 15px 15px 5px;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.9);
@@ -7159,14 +7109,6 @@ p > span.rank-5 {
   border: 1px solid #444;
   border-bottom: 1px solid #777;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(0, 0, 0, 0.6);
-  text-align: center;
-}
-.item-group >h5 {
-  margin: 0 0 5px;
-  padding: 0;
-  border-radius: 5px;
-  color: #c1b8ad;
-  text-shadow: 0 1px 1px #000;
   text-align: center;
 }
 .item-group img {

@@ -1,0 +1,73 @@
+.subSpotItems {
+    width: 100%;
+    height: 90px;
+    overflow: hidden;
+    border: 1px solid #444;
+    padding: 7px 10px;
+    background: url(/assets/imag/box-bg.jpg) #1b222a no-repeat;
+    box-shadow: 0 1px 3px #000, inset 0 0 20px #151b21;
+}
+.cornerBox {
+    width: 100%;
+    height: auto;
+    border: 1px solid #777;
+    box-shadow: inset 0 0 20px #18150e;
+    padding: 7px 10px;
+    background: url(/assets/img/box-bg.jpg) #1b222a no-repeat;
+    color: #777;
+}
+.cornerBox > h4 {
+    color: #c1b8ad;
+    font-family: AdelonMedium, serif;
+    text-transform: uppercase;
+    text-shadow: 0 1px 2px #000;
+    margin: 10px 0 3px;
+}
+.cornerBox > .separator-box {
+    height: 2px;
+    border-radius: 3px;
+    background: #666;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+.cornerBox .corner {
+    position: absolute;
+    width: 38px;
+    height: 41px;
+    background: url(/assets/img/box-corners-2.png) no-repeat;
+}
+.cornerBox .corner.tl {
+    top: -4px;
+    left: 6px;
+}
+.cornerBox .corner.tr {
+    top: -4px;
+    right: 6px;
+    background-position: -37px 0;
+}
+.cornerBox .corner.bl {
+    bottom: -5px;
+    left: 6px;
+    background-position: 0 -41px;
+}
+.cornerBox .corner.br {
+    bottom: -5px;
+    right: 6px;
+    background-position: -37px -41px;
+}
+.textLeft {
+    text-align: left;
+}
+
+.itemGroup >h5 {
+    margin: 0 0 5px;
+    padding: 0;
+    border-radius: 5px;
+    color: #c1b8ad;
+    text-shadow: 0 1px 1px #000;
+    text-align: center;
+}
+
+.verticalAlign {
+    vertical-align: inherit
+}
