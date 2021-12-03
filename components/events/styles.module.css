@@ -1,0 +1,73 @@
+.subSpotTitleList {
+    padding-left: 5px;
+    border-bottom: 1px solid #b8b1aa;
+    width: 100%;
+    float: left;
+    margin-bottom: 5px;
+}
+
+.subSpotTitle > h4 {
+    color: #b8b1aa;
+    font-family: AdelonMedium, serif;
+    text-transform: uppercase;
+    text-shadow: 0 1px 2px #000;
+    margin: 10px 0 3px;
+}
+.times {
+    margin: 5px 0;
+}
+
+.listUnStyled {
+    padding-left: 0;
+    list-style: none;
+}
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #777;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: transparent;
+    border-radius: 10px;
+}
+.times>li.live>span.badge {
+    width: 65px;
+    background: #78af02;
+    color: #c1b8ad;
+
+}
+.times>li>span.circle {
+    width: 10px;
+    height: 10px;
+    background: #777;
+    border-radius: 5px;
+    display: inline-block;
+    position: relative;
+    margin-left: 5px;
+    margin-right: -10px;
+    border: 1px solid #00050b;
+}
+
+.times>li.live>span.circle {
+    background: #78af02;
+    border: 0;
+}
+.times>li>span.name {
+    display: inline-block;
+    border-left: 2px solid #777;
+    padding: 7px 0 7px 15px;
+    margin-left: 4px;
+}
+.times>li.live>span.name {
+    font-size: 14px;
+    color: #c1b8ad;
+}
+
+.verticalAlign {
+    vertical-align: inherit
+}
