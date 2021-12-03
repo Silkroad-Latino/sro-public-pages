@@ -1,0 +1,158 @@
+.rankTabs {
+    width: 100%;
+    margin-top: -22px;
+}
+
+.verticalAlign {
+    vertical-align: inherit
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.subSpotTitle h4 {
+    color: #b8b1aa;
+    font-family: AdelonMedium, serif;
+    text-transform: uppercase;
+    text-shadow: 0 1px 2px #000;
+    padding-bottom: 0;
+    margin-top: 30px;
+}
+
+.subSpotTitleList{
+    border-bottom: 1px solid #b8b1aa;
+}
+
+.navTabs > li {
+    float: left;
+    margin-bottom: -1px;
+}
+
+.navTabsGrunge{
+    height: 50px;
+}
+
+.navTabsGrunge a{
+    margin-top: 12px;
+}
+
+.navTabsGrunge li .active a {
+    padding: 8px 15px 5px;
+    margin-left: 4px;
+    margin-right: 0;
+    font-size: 12px;
+    border-color: transparent;
+    border-bottom: 1px solid transparent;
+    color: #777;
+}
+
+.navTabsGrunge > li > a:focus,
+.navTabsGrunge > li > a:hover {
+    border-color: transparent;
+    border-bottom: 1px solid transparent;
+    box-shadow: none;
+    background: 0 0;
+    color: #c1b8ad;
+}
+
+.a {
+    height: 35px;
+    display: block;
+    position: relative;
+    background: #c1b8ad !important;
+    border-color: transparent !important;
+    border-bottom: transparent !important;
+    border-radius: 4px 4px 0 0;
+    color: #181c23;
+    line-height:1.428571;
+    font-size: 12px;
+    margin-right: 0;
+    margin-left: 5px;
+    text-shadow: 0 1px 0 #fff;
+    box-shadow: 0 -1px 2px #090908;
+    padding-bottom: 5px;
+    background: 0 0;
+    text-decoration: none;
+}
+
+.a:hover{
+    color: black !important;
+}
+
+.listGroup.miniRank {
+    padding-top: 3px;
+    margin-bottom: 0;
+}
+.listGroup {
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+.listGroup.miniRank > .listGroupItem {
+    display: block;
+    margin-bottom: 2px;
+    background: transparent !important;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.4) !important;
+    padding: 1px 1px 7px;
+    width: 100%;
+    float: left;
+
+}
+
+.listGroupItemHeading {
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.badgeRank {
+    width: 22px;
+    height: 22px;
+    border-radius: 0;
+    font-size: 11px;
+    padding: 0;
+    margin-right: 5px;
+    display: inline-block;
+    line-height: 24px;
+}
+.badge.lv {
+    font-size: 11px;
+    margin-right: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #999;
+}
+.badge.lv a:hover {
+    text-decoration: none;
+}
+
+.rank1 {
+    background: transparent url(/assets/img/medals-sprite.png) center top;
+    background-position: center -2px;
+    color: transparent;
+}
+
+.rank2 {
+    background: transparent url(/assets/img/medals-sprite.png) center top;
+    background-position: center -28px;
+    color: transparent;
+}
+.rank3 {
+    background: transparent url(/assets/img/medals-sprite.png) center top;
+    background-position: center -56px;
+    color: transparent;
+}
+
+.rank4,
+.rank5 {
+    background: transparent url(/assets/img/medals-sprite.png) center top;
+    background-position: center -83px;
+    color: transparent;
+}

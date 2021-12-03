@@ -3590,9 +3590,9 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li > a:hover {
   border-color: #eee #eee #ddd;
 }
-.nav-tabs > li.active > a,
-.nav-tabs > li.active > a:focus,
-.nav-tabs > li.active > a:hover {
+.navTabs > li.active > a,
+.navTabs > li.active > a:focus,
+.navTabs > li.active > a:hover {
   color: #555;
   cursor: default;
   background-color: #fff;
@@ -3643,6 +3643,11 @@ textarea.input-group-sm > .input-group-btn > .btn {
     border-bottom-color: #fff;
   }
 }
+
+.nav-pills {
+  border-bottom: 1px solid red;
+}
+
 .nav-pills > li {
   float: left;
 }
@@ -4787,14 +4792,7 @@ a.thumbnail:hover {
   padding-left: 0;
   margin-bottom: 20px;
 }
-.list-group-item {
-  position: relative;
-  display: block;
-  padding: 10px 15px;
-  margin-bottom: -1px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-}
+
 .list-group-item:first-child {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -6431,6 +6429,7 @@ fieldset[disabled] .grunge {
   box-shadow: 0 -1px 2px #090908;
   padding-bottom: 5px;
 }
+
 .container-tab {
   border-top: 1px solid #222;
   background: url(/assets/img/gradient.png) repeat-x top;
@@ -7115,21 +7114,8 @@ a.download-button-section:active {
   font-size: 12px;
   margin-bottom: 0;
 }
-.badge-rank {
-  width: 22px;
-  height: 22px;
-  border-radius: 0;
-  font-size: 11px;
-  padding: 0;
-  margin-right: 5px;
-  display: inline-block;
-  line-height: 24px;
-}
-.rank-1 {
-  background: transparent url(/assets/img/medals-sprite.png) center top;
-  background-position: center -2px;
-  color: transparent;
-}
+
+
 .rank-2 {
   background: transparent url(/assets/img/medals-sprite.png) center top;
   background-position: center -28px;

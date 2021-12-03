@@ -1,93 +1,70 @@
 import React from 'react';
+import styles from './styles.module.css'
 
 const RankingComponent = () => {
   return (
     <>
-      <div className="rank-tabs">
-        <ul id="myTab" className="nav nav-pills sub-spot-title-list">
-          <li className="sub-spot-title">
+      <div className={styles.rankTabs}>
+        <ul id="myTab" className={`nav nav-pills ${styles.subSpotTitleList}`}>
+          <li className={styles.subSpotTitle}>
             <h4>
-              <font style={{
-                " verticalAlign": "inherit",
-              }}>
-                <font style={{
-                  " verticalAlign": "inherit",
-                }}>Rankings </font>
-              </font>
+              Rankings
               <a href="https://www.alfa.srolatino-servers.com/community/rankings">
                 <small>
-                  <span className="glyphicon glyphicon-new-window"></span>
+                  <span className={`${styles.glyphicon} glyphicon-new-window`}></span>
                 </small>
               </a>
             </h4>
           </li>
-          <ul className="nav nav-tabs nav-tabs-grunge pull-right">
-            <li className="active">
-              <a href="#rank1" data-toggle="tab">Jugadores</a>
+          <ul className={`nav ${styles.navTabs} ${styles.navTabsGrunge}  pull-right`}>
+            <li className={styles.active}>
+              <a href="#rank1" data-toggle="tab" className={styles.a}>Jugadores</a>
             </li>
             <li>
               <a href="#rank2" data-toggle="tab">Clanes</a>
             </li>
           </ul>
         </ul>
-
+        {/* RANK  CONTAINERS*/}
         <div id="myTabContent" className="tab-content">
+
+          {/* RANK PLAYER*/}
           <div className="tab-pane active" id="rank1">
-            <ul className="mini-rank list-group">
-              <li className="list-group-item">
-                <p className="list-group-item-heading"
+            <ul className={`${styles.miniRank} ${styles.listGroup}`}>
+              <li className={styles.listGroupItem}>
+                <p className={styles.listGroupItemHeading}
                    title="Puntos de artículos: 63926">
-                  <span className="badge-rank rank-1">1</span>
-                  <span className="badge lv">
-                                <font style={{
-                                  " verticalAlign": "inherit",
-                                }}>
-                                  <font style={{
-                                    " verticalAlign": "inherit",
-                                  }}>Nivel 135</font>
-                                </font>
-                              </span>
+                  <span className={`${styles.badgeRank} ${styles.rank1}`}>1</span>
+                  <span className={`${styles.badge} ${styles.lv}`}>
+                    <font className={styles.verticalAlign}>
+                      <font className={styles.verticalAlign}>Nivel 135</font>
+                    </font>
+                  </span>
 
                   <a href="https://www.alfa.srolatino-servers.com/guild/HellWalker/_TheZeger__">
-                    <font style={{
-                      " verticalAlign": "inherit",
-                    }}>
-                      <font style={{
-                        " verticalAlign": "inherit",
-                      }}>_TheZeger__</font>
+                    <font className={styles.verticalAlign}>
+                      <font className={styles.verticalAlign}>_TheZeger__</font>
                     </font>
                   </a>
 
-                  <font style={{
-                    " verticalAlign": "inherit",
-                  }}>
-                    <font style={{
-                      " verticalAlign": "inherit",
-                    }}>-</font>
+                  <font className={styles.verticalAlign}>
+                    <font className={styles.verticalAlign}>-</font>
                   </font>
 
                   <a href="https://www.alfa.srolatino-servers.com/guild/HellWalker">
-                    <font style={{
-                      " verticalAlign": "inherit",
-                    }}>
-                      <font style={{
-                        " verticalAlign": "inherit",
-                      }}>Caminante del infierno</font>
+                    <font className={styles.verticalAlign}>
+                      <font className={styles.verticalAlign}> HellWalker</font>
                     </font>
                   </a>
                 </p>
               </li>
-              <li className="list-group-item">
-                <p className="list-group-item-heading"
+              <li className={styles.listGroupItem}>
+                <p className={styles.listGroupItemHeading}
                    title="Puntos de artículos: 63923">
-                  <span className="badge-rank rank-2">2</span>
-                  <span className="badge lv">
-                                <font style={{
-                                  " verticalAlign": "inherit",
-                                }}>
-                                  <font style={{
-                                    " verticalAlign": "inherit",
-                                  }}>Nivel 135</font>
+                  <span className={` ${styles.badgeRank} ${styles.rank2}`}>2</span>
+                  <span className={`${styles.badge} ${styles.lv}`}>
+                                <font >
+                                  <font className={styles.verticalAlign}>Nivel 135</font>
                                 </font>
                               </span>
                   <a href="https://www.alfa.srolatino-servers.com/guild/InsertGuild/Gus7Diaz">Gus7Diaz</a>
@@ -95,237 +72,165 @@ const RankingComponent = () => {
                   <a href="https://www.alfa.srolatino-servers.com/guild/InsertGuild">InsertGuild</a>
                 </p>
               </li>
-              <li className="list-group-item">
-                <p className="list-group-item-heading"
+              <li className={styles.listGroupItem}>
+                <p className={styles.listGroupItemHeading}
                    title="Puntos de artículos: 63921">
-                  <span className="badge-rank rank-3">3</span>
-                  <span className="badge lv">
-                                <font style={{
-                                  " verticalAlign": "inherit",
-                                }}>
-                                  <font style={{
-                                    " verticalAlign": "inherit",
-                                  }}>Nivel 135</font>
+                  <span className={` ${styles.badgeRank} ${styles.rank3}`}>3</span>
+                  <span className={`${styles.badge} ${styles.lv}`}>
+                                <font className={styles.verticalAlign}>
+                                  <font className={styles.verticalAlign}>Nivel 135</font>
                                 </font>
                               </span>
                   <a href="https://www.alfa.srolatino-servers.com/guild/InsertGuild/xMickey">
-                    <font style={{
-                      " verticalAlign": "inherit",
-                    }}>
-                      <font style={{
-                        " verticalAlign": "inherit",
-                      }}>xMickey</font>
+                    <font className={styles.verticalAlign}>
+                      <font className={styles.verticalAlign}>xMickey</font>
                     </font>
                   </a>
-                  <font style={{
-                    " verticalAlign": "inherit",
-                  }}>
-                    <font style={{
-                      " verticalAlign": "inherit",
-                    }}> - </font>
+                  <font className={styles.verticalAlign}>
+                    <font className={styles.verticalAlign}> - </font>
                   </font>
                   <a href="https://www.alfa.srolatino-servers.com/guild/InsertGuild">
-                    <font style={{
-                      " verticalAlign": "inherit",
-                    }}>
-                      <font style={{
-                        " verticalAlign": "inherit",
-                      }}>InsertGuild</font>
+                    <font className={styles.verticalAlign}>
+                      <font className={styles.verticalAlign}>InsertGuild</font>
                     </font>
                   </a>
                 </p>
               </li>
-              <li className="list-group-item">
-                <p className="list-group-item-heading"
+              <li className={styles.listGroupItem}>
+                <p className={styles.listGroupItemHeading}
                    title="Puntos de artículos: 63919">
-                  <span className="badge-rank rank-4">4</span>
-                  <span className="badge lv">
-                                <font style={{
-                                  " verticalAlign": "inherit",
-                                }}>
-                                  <font style={{
-                                    " verticalAlign": "inherit",
-                                  }}>Nivel 135</font>
+                  <span className={` ${styles.badgeRank} ${styles.rank4}`}>4</span>
+                  <span className={`${styles.badge} ${styles.lv}`}>
+                                <font className={styles.verticalAlign}>
+                                  <font className={styles.verticalAlign}>Nivel 135</font>
                                 </font>
                               </span>
 
                   <a href="https://www.alfa.srolatino-servers.com/guild/Thiefs4Life/Infiiniity">
-                    <font style={{
-                      " verticalAlign": "inherit",
-                    }}>
-                      <font style={{
-                        " verticalAlign": "inherit",
-                      }}>Infiniidad</font>
+                    <font className={styles.verticalAlign}>
+                      <font className={styles.verticalAlign}>Infiniidad</font>
                     </font>
                   </a>
 
-                  <font style={{
-                    " verticalAlign": "inherit",
-                  }}>
-                    <font style={{
-                      " verticalAlign": "inherit",
-                    }}> - </font>
+                  <font className={styles.verticalAlign}>
+                    <font className={styles.verticalAlign}> - </font>
                   </font>
 
                   <a href="https://www.alfa.srolatino-servers.com/guild/Thiefs4Life">
-                    <font style={{
-                      " verticalAlign": "inherit",
-                    }}>
-                      <font style={{
-                        " verticalAlign": "inherit",
-                      }}>Thiefs4Life</font>
+                    <font className={styles.verticalAlign}>
+                      <font className={styles.verticalAlign}>Thiefs4Life</font>
                     </font>
                   </a>
                 </p>
               </li>
-              <li className="list-group-item">
-                <p className="list-group-item-heading"
+              <li className={styles.listGroupItem}>
+                <p className={styles.listGroupItemHeading}
                    title="Puntos de artículos: 63919">
-                  <span className="badge-rank rank-5">5</span>
-                  <span className="badge lv">
-                                <font style={{
-                                  " verticalAlign": "inherit",
-                                }}>
-                                  <font style={{
-                                    " verticalAlign": "inherit",
-                                  }}>Nivel 135</font>
+                  <span className={` ${styles.badgeRank} ${styles.rank5}`}>5</span>
+                  <span className={`${styles.badge} ${styles.lv}`}>
+                                <font className={styles.verticalAlign}>
+                                  <font className={styles.verticalAlign}>Nivel 135</font>
                                 </font></span>
                   <a href="https://www.alfa.srolatino-servers.com/guild/AnGeLs_DeMoN/_P1TUF1NA_">
-                    <font style={{
-                      " verticalAlign": "inherit",
-                    }}>
-                      <font style={{
-                        " verticalAlign": "inherit",
-                      }}>_P1TUF1NA_</font>
+                    <font className={styles.verticalAlign}>
+                      <font className={styles.verticalAlign}>_P1TUF1NA_</font>
                     </font>
                   </a>
 
-                  <font style={{
-                    " verticalAlign": "inherit",
-                  }}>
-                    <font style={{
-                      " verticalAlign": "inherit",
-                    }}> - </font>
+                  <font className={styles.verticalAlign}>
+                    <font className={styles.verticalAlign}> - </font>
                   </font>
 
                   <a href="https://www.alfa.srolatino-servers.com/guild/AnGeLs_DeMoN">
-                    <font style={{
-                      " verticalAlign": "inherit",
-                    }}>
-                      <font style={{
-                        " verticalAlign": "inherit",
-                      }}>AnGeLs_DeMoN</font>
+                    <font className={styles.verticalAlign}>
+                      <font className={styles.verticalAlign}>AnGeLs_DeMoN</font>
                     </font>
                   </a>
                 </p>
               </li>
             </ul>
           </div>
+          {/* RANK PLAYER*/}
 
+
+          {/* RANK GUILD*/}
           <div className="tab-pane" id="rank2">
-            <ul className="mini-rank list-group">
-              <li className="list-group-item">
-                <p className="list-group-item-heading"
+            <ul className={`${styles.miniRank} ${styles.listGroup}`}>
+              <li className={styles.listGroupItem}>
+                <p className={styles.listGroupItemHeading}
                    title="Total Points: 1,861,572">
-                  <span className="badge-rank rank-1">1</span>
-                  <span className="badge lv">
-                                <font style={{
-                                  " verticalAlign": "inherit",
-                                }}>
-                                  <font style={{
-                                    " verticalAlign": "inherit",
-                                  }}>Nivel 5</font>
+                  <span className={`${styles.badgeRank} ${styles.rank1}`}>1</span>
+                  <span className={`${styles.badge} ${styles.lv}`}>
+                                <font className={styles.verticalAlign}>
+                                  <font className={styles.verticalAlign}>Nivel 5</font>
                                 </font>
                               </span>
                   <a href="https://www.alfa.srolatino-servers.com/guild/AnGeLs_DeMoN">
-                    <font style={{
-                      " verticalAlign": "inherit",
-                    }}>
-                      <font style={{
-                        " verticalAlign": "inherit",
-                      }}>AnGeLs_DeMoN</font>
+                    <font className={styles.verticalAlign}>
+                      <font className={styles.verticalAlign}>AnGeLs_DeMoN</font>
                     </font>
                   </a>
 
-                  <font style={{
-                    " verticalAlign": "inherit",
-                  }}>
-                    <font style={{
-                      " verticalAlign": "inherit",
-                    }}> (798,252,815)</font>
+                  <font className={styles.verticalAlign}>
+                    <font className={styles.verticalAlign}> (798,252,815)</font>
                   </font>
                 </p>
               </li>
-              <li className="list-group-item">
-                <p className="list-group-item-heading"
+              <li className={styles.listGroupItem}>
+                <p className={styles.listGroupItemHeading}
                    title="Total Points: 1,721,249">
-                  <span className="badge-rank rank-2">2</span>
-                  <span className="badge lv">
-                                <font style={{
-                                  " verticalAlign": "inherit",
-                                }}>
-                                  <font style={{
-                                    " verticalAlign": "inherit",
-                                  }}>Nivel 5</font>
+                  <span className={`${styles.badgeRank} ${styles.rank2}`}>2</span>
+                  <span className={`${styles.badge} ${styles.lv}`}>
+                                <font className={styles.verticalAlign}>
+                                  <font className={styles.verticalAlign}>Nivel 5</font>
                                 </font>
                               </span>
 
                   <a href="https://www.alfa.srolatino-servers.com/guild/InsertGuild">
-                    <font style={{
-                      " verticalAlign": "inherit",
-                    }}>
-                      <font style={{
-                        " verticalAlign": "inherit",
-                      }}>InsertGuild</font>
+                    <font className={styles.verticalAlign}>
+                      <font className={styles.verticalAlign}>InsertGuild</font>
                     </font>
                   </a>
-                  <font style={{
-                    " verticalAlign": "inherit",
-                  }}>
-                    <font style={{
-                      " verticalAlign": "inherit",
-                    }}> (5.214.658)</font>
+                  <font className={styles.verticalAlign}>
+                    <font className={styles.verticalAlign}> (5.214.658)</font>
                   </font>
                 </p>
               </li>
-              <li className="list-group-item">
-                <p className="list-group-item-heading"
+              <li className={styles.listGroupItem}>
+                <p className={styles.listGroupItemHeading}
                    title="Total Points: 1,541,862">
-                  <span className="badge-rank rank-3">3</span>
-                  <span className="badge lv">
-                                <font style={{
-                                  " verticalAlign": "inherit",
-                                }}>
-                                  <font style={{
-                                    " verticalAlign": "inherit",
-                                  }}>Nivel 5</font>
+                  <span className={`${styles.badgeRank} ${styles.rank3}`}>3</span>
+                  <span className={`${styles.badge} ${styles.lv}`}>
+                                <font className={styles.verticalAlign}>
+                                  <font className={styles.verticalAlign}>Nivel 5</font>
                                 </font>
                               </span>
                   <a href="https://www.alfa.srolatino-servers.com/guild/Thiefs4Life">Thiefs4Life</a>
                   (151,260,947)
                 </p>
               </li>
-              <li className="list-group-item">
-                <p className="list-group-item-heading"
+              <li className={styles.listGroupItem}>
+                <p className={styles.listGroupItemHeading}
                    title="Total Points: 1,497,106">
-                  <span className="badge-rank rank-4">4</span>
-                  <span className="badge lv">Lv 5</span>
+                  <span className={`${styles.badgeRank} ${styles.rank4}`}>4</span>
+                  <span className={`${styles.badge} ${styles.lv}`}>Lv 5</span>
                   <a href="https://www.alfa.srolatino-servers.com/guild/WrathOfGods">WrathOfGods</a>
                   (793,424,909)
                 </p>
               </li>
-              <li className="list-group-item">
-                <p className="list-group-item-heading"
+              <li className={styles.listGroupItem}>
+                <p className={styles.listGroupItemHeading}
                    title="Total Points: 1,375,168">
-                  <span className="badge-rank rank-5">5</span>
-                  <span className="badge lv">Lv 5</span>
+                  <span className={`${styles.badgeRank} ${styles.rank5}`}>5</span>
+                  <span className={`${styles.badge} ${styles.lv}`}>Lv 5</span>
                   <a href="https://www.alfa.srolatino-servers.com/guild/LatinNarcos">LatinNarcos</a>
                   (811,049,773)
                 </p>
               </li>
-
             </ul>
           </div>
+          {/* RANK GUILD*/}
+
         </div>
       </div>
     </>
