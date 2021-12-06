@@ -12,8 +12,8 @@ const HourComponent = () => {
         </ul>
 
         <p id="serverTime">
-          <font calssName={styles.verticalAlign}>
-            <font calssName={styles.verticalAlign}>21:28:41 (UTC-5)</font>
+          <font className={styles.verticalAlign}>
+            <font className={styles.verticalAlign}>21:28:41 (UTC-5)</font>
           </font>
         </p>
       </div>

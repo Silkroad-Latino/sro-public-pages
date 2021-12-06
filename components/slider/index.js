@@ -53,7 +53,7 @@ const SliderComponent = () => {
               </a>
               <a className={`bx-next ${styles.bxControlsA}`} href="">
                 <font className={styles.verticalAlign}>
-                  <font sclassName={styles.verticalAlign}>próximo</font>
+                  <font className={styles.verticalAlign}>próximo</font>
                 </font>
               </a>
             </div>

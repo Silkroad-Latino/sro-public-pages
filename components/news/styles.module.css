@@ -33,13 +33,13 @@
     box-shadow: 0 1px 3px #000;
 }
 .listGroupItem {
-    background-color: transparent;
-    border: 0;
-    border-bottom: 1px solid rgba(0,0,0,.3);
-    border-top: 1px solid rgba(255,255,255,.03);
-    margin-bottom: 0;
-    position: relative;
-    border-radius: 0;
+    background-color: transparent !important;
+    border: 0 !important;
+    border-bottom: 1px solid rgba(0,0,0,.3) !important;
+    border-top: 1px solid rgba(255,255,255,.03) !important;
+    margin-bottom: 0 !important;
+    position: relative !important;
+    border-radius: 0 !important;
 }
 .listGroupItemHeading {
     margin-top: 0;

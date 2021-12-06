@@ -8,7 +8,8 @@ const DiscordComponent = () => {
         <iframe
           src="https://discordapp.com/widget?id=408379216862773248&amp;theme=dark"
           width="100%"
-          height="200px" allowTransparency="true" frameBorder="0"
+          height="200px"
+          frameBorder="0"
         />
       </div>
     </>

@@ -36,7 +36,7 @@ const NavbarComponent = () => {
             className={`navbar navbar-default ${styles.navbarMain}`}
             role="navigation">
             <div className="container">
-              <div className={styles.navbarHeader}>
+              <div className="navbar-header">
                 <button type="button" className={styles.navbarToggle} data-toggle="collapse"
                         data-target="#bs-example-navbar-collapse-1">
                             <span className={styles.srOnly}>
@@ -53,7 +53,7 @@ const NavbarComponent = () => {
                 </div>
               </div>
 
-              <div className={`collapse ${styles.navbarCollapse}`}>
+              <div className={`navbar-collapse collapse ${styles.forceCollapse}`}>
                 <ul className={`${styles.nav} ${styles.navbarNav}`}>
                   <li>
                     <a href="https://www.alfa.srolatino-servers.com/blog" className={styles.navbarNavA}>Noticias</a>

@@ -6,7 +6,7 @@ const LoginComponent = () => {
     <>
       <div className={`col-md-3 ${styles.spotRight}`}>
         <a href="https://www.alfa.srolatino-servers.com/download" className={styles.downloadButton}>
-          <span className={`${styles.glyphicon} glyphicon-cloud-download`}></span>
+          <span className={`${styles.glyphicon} glyphicon-cloud-download`} />
           <span className="hidden-md">descarga gratis</span>
         </a>
 
@@ -16,7 +16,7 @@ const LoginComponent = () => {
               <div className={`${styles.formGroup} ${styles.narrow}`}>
                 <input type="username" className={`${styles.formControl} ${styles.grunge}`} id="username"
                        placeholder="IDENTIFICACIÓN"/>
-                <span className="endbtn"></span>
+                <span className="endbtn" />
               </div>
               <div className={`${styles.formGroup} ${styles.narrow}`}>
                 <input type="password" className={`${styles.formControl} ${styles.grunge}`} id="password"

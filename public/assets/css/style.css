@@ -126,7 +126,7 @@ header.main {
   margin-bottom: 0;
 }
 
-.container .navbar-header {
+.container .navbar-header-old{
   margin-right: 0;
   margin-left: 0;
 }
@@ -2347,19 +2347,10 @@ p {
 }
 
 @media (min-width: 992px) {
-  .navbar-collapse.collapse {
-    display: block !important;
-    height: auto !important;
-    padding-bottom: 0;
-    overflow: visible !important;
-  }
-}
-
-@media (min-width: 992px) {
   .container-fluid > .navbar-collapse,
   .container-fluid > .navbar-header,
   .container > .navbar-collapse,
-  .container > .navbar-header {
+  .container > .navbar-header-old{
     margin-right: 0;
     margin-left: 0;
   }
@@ -2377,7 +2368,7 @@ p {
 }
 
 @media (min-width: 992px) {
-  .navbar-header {
+  .navbar-header-old{
     float: left;
   }
 }
