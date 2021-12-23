@@ -14,14 +14,18 @@ import EventsComponent from "../components/events";
 import ScreenComponent from "../components/screenshots";
 import React from "react";
 import SliderComponent from "../components/slider";
-import LoginComponent from "../components/login";
+import LoginHomeComponent from "../components/login_home";
 
 export default function Home() {
+
+
+
+
     return (
         <MainLayout>
             <div className="container">
                 <SliderComponent/>
-                <LoginComponent/>
+                <LoginHomeComponent/>
             </div>
 
             <div className="row">
@@ -56,13 +60,9 @@ export default function Home() {
                 <DiscordComponent/>
             </div>
             <div className="col-md-7 no-padding-left">
-                <div className="list-group news">
-                    <NewsComponent/>
-                    <NewsComponent/>
-                    <NewsComponent/>
-                    <NewsComponent/>
-                    <NewsComponent/>
-                </div>
+
+              <NewsComponent/>
+
                 <div className="col-md-12 no-padding-all">
                     <a href="https://www.alfa.srolatino-servers.com/blog"
                        className="btn btn-block btn-grunge-simple" role="button">Mas</a>

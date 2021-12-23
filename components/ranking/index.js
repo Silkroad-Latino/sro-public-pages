@@ -1,7 +1,15 @@
-import React from 'react';
+import {useContext} from "react";
 import styles from './styles.module.css'
 
+import rankingPlayers from "../../context/ranking_player/rankingPlayersContext";
+import getPlayerRanking from '../../context/ranking_player/rankingPlayersContext'
+
 const RankingComponent = () => {
+
+  getPlayerRanking();
+
+  const users = useContext(rankingPlayers);
+
   return (
     <>
       <div className={styles.rankTabs}>
@@ -11,7 +19,7 @@ const RankingComponent = () => {
               Rankings
               <a href="https://www.alfa.srolatino-servers.com/community/rankings">
                 <small>
-                  <span className={`${styles.glyphicon} glyphicon-new-window`}></span>
+                  <span className={`${styles.glyphicon} glyphicon-new-window`}/>
                 </small>
               </a>
             </h4>
@@ -43,7 +51,7 @@ const RankingComponent = () => {
 
                   <a href="https://www.alfa.srolatino-servers.com/guild/HellWalker/_TheZeger__">
                     <font className={styles.verticalAlign}>
-                      <font className={styles.verticalAlign}>_TheZeger__</font>
+                      <font className={styles.verticalAlign}></font>
                     </font>
                   </a>
 
@@ -161,10 +169,10 @@ const RankingComponent = () => {
                    title="Total Points: 1,861,572">
                   <span className={`${styles.badgeRank} ${styles.rank1}`}>1</span>
                   <span className={`${styles.badge} ${styles.lv}`}>
-                                <font className={styles.verticalAlign}>
-                                  <font className={styles.verticalAlign}>Nivel 5</font>
-                                </font>
-                              </span>
+                    <font className={styles.verticalAlign}>
+                      <font className={styles.verticalAlign}>Nivel 5</font>
+                    </font>
+                  </span>
                   <a href="https://www.alfa.srolatino-servers.com/guild/AnGeLs_DeMoN">
                     <font className={styles.verticalAlign}>
                       <font className={styles.verticalAlign}>AnGeLs_DeMoN</font>

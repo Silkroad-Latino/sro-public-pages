@@ -1,0 +1,201 @@
+.normalContent {
+    background: #1f252c url(/assets/img/content-top.jpg) top right no-repeat;
+    border: 1px solid #777;
+    border-top: 1px solid #c1b8ad;
+    box-shadow: inset 0 1px 1px #000,0 1px 1px 1px#000;
+    padding-bottom: 40px;
+    height: 2150px;
+}
+
+.breadcrumb {
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.grunge {
+    border-radius: 0;
+    border: 1px solid #666;
+    border-bottom: 1px solid #555;
+    background-color: #111;
+    color: #777;
+    box-shadow: 0 2px 3px #000, inset 0 0 5px #000;
+    outline: 0;
+}
+
+.breadcrumb.grunge {
+    background: 0 0;
+    box-shadow: none;
+    font-size: 11px;
+    border-radius: 0 0 5px 0;
+    background: rgba(0,0,0,.5);
+    border: 0;
+    text-align: left;
+    float: left;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    border-top: 1px solid rgba(0,0,0,.9);
+    padding: 5px 10px;
+    margin-left: 16px;
+}
+.breadcrumb>li+li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: "/\00a0";
+}
+
+.breadcrumb>li+li:before {
+    padding: 0 5px;
+    color: #ccc;
+    border: 0;
+    content: " ";
+    display: inline-block;
+    background: url(/assets/img/flyout-arrows.gif) no-repeat -3px -230px;
+    width: 12px;
+    height: 10px;
+    margin: 2px 7px 0 0;
+}
+
+.breadcrumb li {
+    display: inline-block;
+}
+
+.breadcrumb li a {
+    color: #888;
+    text-shadow: 0 1px 1px #000;
+    text-decoration: none;
+}
+.pageSubTitle {
+    font-size: 18px;
+    color: #c1b8ad;
+    position: relative;
+    margin-left: 10px;
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.glyphicon-chevron-right:before {
+    content: "\e080";
+}
+
+.panelGrunge {
+    background-color: rgba(0,0,0,.5);
+    border-color: #777;
+    border-radius: 2px;
+    height: 120px;
+}
+
+.panel {
+    border: 1px solid transparent;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    margin: 15px 15px;
+    border: 1px solid #777;
+}
+
+.panelBody {
+    padding: 15px;
+}
+
+.panelBody:after{
+    clear: both;
+}
+
+.listUnStyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+.downloadButtonSection {
+    color: #ccc;
+    font-family: 'AdelonMedium', serif;
+    font-size: 22px;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 26px;
+    text-shadow: 0 1px 5px rgb(0 0 0 / 80%);
+    padding: 15px 0;
+    display: block;
+    background: linear-gradient(to bottom, #968872 0%,#766e63 50%,#68604f 50%,#58524d 100%);
+    width: 100%;
+    margin-bottom: 5px;
+    text-align: center;
+    border: 0;
+    box-shadow: 0 0 0 1px #000, 0 0 0 2px #777, 0 3px 3px #000;
+    margin-top: 15px;
+}
+.downloadButtonSection:hover{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.separator {
+    height: 150px;
+    width: 96%;
+    background: #1f252c url(/assets/img/subspot_bg.jpg) center top no-repeat;
+    margin: 15px 15px -150px;
+    border-top: 1px solid #000;
+}
+
+.pageSubTitle {
+    font-size: 18px;
+    color: #c1b8ad;
+    position: relative;
+}
+
+.table {
+    width: 90%;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    max-width: 100%;
+    background-color: transparent;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.tableSpecs>thead>tr>th.first {
+    border-left: none;
+}
+
+.tableSpecs>thead>tr>th {
+    border-bottom: 2px solid #444;
+    text-align: center;
+}
+
+.table>thead>tr>th {
+    vertical-align: bottom;
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+.tableSpecs th {
+    background-color: rgba(255,255,255,.1);
+    border-left: none;
+    border-bottom: 1px solid #444;
+    text-align: center;
+}
+.tableSpecs td {
+    border-left: 1px solid #444;
+    border-bottom: 1px solid #444;
+    font-size: 11px;
+    text-align: center;
+    background-color: rgba(255,255,255,.05);
+}

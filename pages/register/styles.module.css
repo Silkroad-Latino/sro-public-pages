@@ -1,0 +1,85 @@
+.newsContainer{
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 50px;
+}
+.titleNews{
+    width: 100%;
+    margin-left: 30px;
+    margin-top: 80px;
+}
+
+.titleNews h2{
+    font-family: AdelonMedium,serif;
+    color: #fff;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px #000;
+    margin-bottom: -20px;
+}
+
+.listGroupComponent{
+    margin-top: 10px;
+}
+.regSteps {
+    margin-bottom: 10px;
+    background: url(/assets/img/mini-bg1.png) right -70px no-repeat;
+    padding: 20px 0 0;
+}
+.rs1.active {
+    background-position: -1px 0;
+}
+
+.regStep {
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    margin: 15px 0 0;
+    font-family: AdelonMedium,serif;
+    font-size: 18px;
+    background: url(/assets/img/regstep.png) no-repeat;
+}
+.rs2 {
+    background-position: -272px 8px;
+}
+.rs3 {
+    background-position: -544px 8px;
+}
+.regStep.active {
+    text-shadow: 0 1px 4px #000;
+    color: #ddd;
+    font-size: 22px;
+    background: url(/assets/img/regstep-active.png) no-repeat;
+    height: 50px;
+}
+
+.grunge {
+    border-radius: 0;
+    border: 1px solid #666;
+    border-bottom: 1px solid #555;
+    background-color: #111;
+    color: #777;
+    box-shadow: 0 2px 3px #000, inset 0 0 5px #000;
+    outline: 0;
+}
+.grunge:focus, .grunge:target {
+    color: #777;
+    border-color: #777;
+    box-shadow: 0 2px 3px #000, inset 0 0 5px #000;
+    background-color: #080808;
+}
+
+.btnGrunge{
+    width: 100%;
+    border-radius: 0;
+    overflow: hidden;
+    border-radius: 1px;
+    color: #222228;
+    font-family: AdelonMedium,serif;
+    text-transform: uppercase;
+    text-shadow: 0 1px 3px rgb(255 255 255 / 10%);
+    box-shadow: 0 2px 3px rgb(0 0 0 / 50%);
+    background: url(/assets/img/login-submit.png) 0 -7px repeat-x;
+}
+

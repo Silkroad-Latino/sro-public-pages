@@ -1,0 +1,63 @@
+.newsContainer{
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 50px;
+}
+.titleNews{
+    width: 100%;
+    margin-left: 30px;
+    margin-top: 80px;
+}
+
+.titleNews h2{
+    font-family: AdelonMedium,serif;
+    color: #fff;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px #000;
+    margin-bottom: -20px;
+}
+
+.listGroupComponent{
+    margin-top: 10px;
+}
+.regSteps {
+    margin-bottom: 10px;
+    background: url(/assets/img/mini-bg1.png) right -70px no-repeat;
+    padding: 20px 0 0;
+}
+
+.regStep {
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    margin: 15px 0 0;
+    font-family: AdelonMedium,serif;
+    font-size: 18px;
+    background: url(/assets/img/regstep.png) no-repeat;
+}
+
+.regStep.active {
+    text-shadow: 0 1px 4px #000;
+    color: #ddd;
+    font-size: 22px;
+    background: url(/assets/img/regstep-active.png) no-repeat;
+}
+.rs1{
+    background-position: -1px 8px;
+}
+.rs2.active {
+    background-position: -272px 0;
+}
+.rs3 {
+    background-position: -544px 8px;
+}
+
+div.emailImg {
+    width: 128px;
+    height: 128px;
+    margin: 20px auto;
+    background: url(/assets/img/email.png);
+    background-size: cover;
+}
