@@ -21,8 +21,8 @@ export default function MainLayout({ children }) {
                         <circle
                           className="goog-te-spinner-path"
                           fill="none"
-                          strokeWidth="6" s
-                          trokeLinecap="round"
+                          strokeWidth="6"
+                          strokeLinecap="round"
                           cx="33"
                           cy="33" r="30"
                         />

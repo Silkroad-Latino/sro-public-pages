@@ -3,9 +3,6 @@ import '/public/assets/css/smart.css'
 import '/public/assets/css/style.css'
 
 function MyApp({ Component, pageProps }) {
-  return  <rankingPlayers>
-            <Component {...pageProps} />
-          </rankingPlayers>
-
+  return <Component {...pageProps} />
 }
-export default MyApp;
+export default MyApp

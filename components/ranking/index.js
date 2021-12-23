@@ -1,14 +1,10 @@
 import {useContext} from "react";
 import styles from './styles.module.css'
 
-import rankingPlayers from "../../context/ranking_player/rankingPlayersContext";
-import getPlayerRanking from '../../context/ranking_player/rankingPlayersContext'
+import useRankingPlayers from "/hooks/useRankingPlayers";
 
 const RankingComponent = () => {
-
-  getPlayerRanking();
-
-  const users = useContext(rankingPlayers);
+  const rankingPlayers = useRankingPlayers(5);
 
   return (
     <>
@@ -39,123 +35,34 @@ const RankingComponent = () => {
           {/* RANK PLAYER*/}
           <div className="tab-pane active" id="rank1">
             <ul className={`${styles.miniRank} ${styles.listGroup}`}>
-              <li className={styles.listGroupItem}>
-                <p className={styles.listGroupItemHeading}
-                   title="Puntos de artículos: 63926">
-                  <span className={`${styles.badgeRank} ${styles.rank1}`}>1</span>
-                  <span className={`${styles.badge} ${styles.lv}`}>
+              {rankingPlayers.map((row, index) => (
+                <li className={styles.listGroupItem} key={`rankingPlayers${index}`}>
+                  <p className={styles.listGroupItemHeading}>
+                    <span className={`${styles.badgeRank} ${styles[`rank${index+1}`]}`}>1</span>
+                    <span className={`${styles.badge} ${styles.lv}`}>
                     <font className={styles.verticalAlign}>
-                      <font className={styles.verticalAlign}>Nivel 135</font>
+                      <font className={styles.verticalAlign}>{row.curLevel}</font>
                     </font>
                   </span>
 
-                  <a href="https://www.alfa.srolatino-servers.com/guild/HellWalker/_TheZeger__">
-                    <font className={styles.verticalAlign}>
-                      <font className={styles.verticalAlign}></font>
-                    </font>
-                  </a>
+                    <a href={`https://www.alfa.srolatino-servers.com/guild/${row.guildName}/_TheZeger__`}>
+                      <font className={styles.verticalAlign}>
+                        dddd
+                      </font>
+                    </a>
 
-                  <font className={styles.verticalAlign}>
-                    <font className={styles.verticalAlign}>-</font>
-                  </font>
+                    <font className={styles.verticalAlign}>
+                      <font className={styles.verticalAlign}>-</font>
+                    </font>
 
-                  <a href="https://www.alfa.srolatino-servers.com/guild/HellWalker">
-                    <font className={styles.verticalAlign}>
-                      <font className={styles.verticalAlign}> HellWalker</font>
-                    </font>
-                  </a>
-                </p>
-              </li>
-              <li className={styles.listGroupItem}>
-                <p className={styles.listGroupItemHeading}
-                   title="Puntos de artículos: 63923">
-                  <span className={` ${styles.badgeRank} ${styles.rank2}`}>2</span>
-                  <span className={`${styles.badge} ${styles.lv}`}>
-                                <font >
-                                  <font className={styles.verticalAlign}>Nivel 135</font>
-                                </font>
-                              </span>
-                  <a href="https://www.alfa.srolatino-servers.com/guild/InsertGuild/Gus7Diaz">Gus7Diaz</a>
-                  -
-                  <a href="https://www.alfa.srolatino-servers.com/guild/InsertGuild">InsertGuild</a>
-                </p>
-              </li>
-              <li className={styles.listGroupItem}>
-                <p className={styles.listGroupItemHeading}
-                   title="Puntos de artículos: 63921">
-                  <span className={` ${styles.badgeRank} ${styles.rank3}`}>3</span>
-                  <span className={`${styles.badge} ${styles.lv}`}>
-                                <font className={styles.verticalAlign}>
-                                  <font className={styles.verticalAlign}>Nivel 135</font>
-                                </font>
-                              </span>
-                  <a href="https://www.alfa.srolatino-servers.com/guild/InsertGuild/xMickey">
-                    <font className={styles.verticalAlign}>
-                      <font className={styles.verticalAlign}>xMickey</font>
-                    </font>
-                  </a>
-                  <font className={styles.verticalAlign}>
-                    <font className={styles.verticalAlign}> - </font>
-                  </font>
-                  <a href="https://www.alfa.srolatino-servers.com/guild/InsertGuild">
-                    <font className={styles.verticalAlign}>
-                      <font className={styles.verticalAlign}>InsertGuild</font>
-                    </font>
-                  </a>
-                </p>
-              </li>
-              <li className={styles.listGroupItem}>
-                <p className={styles.listGroupItemHeading}
-                   title="Puntos de artículos: 63919">
-                  <span className={` ${styles.badgeRank} ${styles.rank4}`}>4</span>
-                  <span className={`${styles.badge} ${styles.lv}`}>
-                                <font className={styles.verticalAlign}>
-                                  <font className={styles.verticalAlign}>Nivel 135</font>
-                                </font>
-                              </span>
-
-                  <a href="https://www.alfa.srolatino-servers.com/guild/Thiefs4Life/Infiiniity">
-                    <font className={styles.verticalAlign}>
-                      <font className={styles.verticalAlign}>Infiniidad</font>
-                    </font>
-                  </a>
-
-                  <font className={styles.verticalAlign}>
-                    <font className={styles.verticalAlign}> - </font>
-                  </font>
-
-                  <a href="https://www.alfa.srolatino-servers.com/guild/Thiefs4Life">
-                    <font className={styles.verticalAlign}>
-                      <font className={styles.verticalAlign}>Thiefs4Life</font>
-                    </font>
-                  </a>
-                </p>
-              </li>
-              <li className={styles.listGroupItem}>
-                <p className={styles.listGroupItemHeading}
-                   title="Puntos de artículos: 63919">
-                  <span className={` ${styles.badgeRank} ${styles.rank5}`}>5</span>
-                  <span className={`${styles.badge} ${styles.lv}`}>
-                                <font className={styles.verticalAlign}>
-                                  <font className={styles.verticalAlign}>Nivel 135</font>
-                                </font></span>
-                  <a href="https://www.alfa.srolatino-servers.com/guild/AnGeLs_DeMoN/_P1TUF1NA_">
-                    <font className={styles.verticalAlign}>
-                      <font className={styles.verticalAlign}>_P1TUF1NA_</font>
-                    </font>
-                  </a>
-
-                  <font className={styles.verticalAlign}>
-                    <font className={styles.verticalAlign}> - </font>
-                  </font>
-
-                  <a href="https://www.alfa.srolatino-servers.com/guild/AnGeLs_DeMoN">
-                    <font className={styles.verticalAlign}>
-                      <font className={styles.verticalAlign}>AnGeLs_DeMoN</font>
-                    </font>
-                  </a>
-                </p>
-              </li>
+                    <a href={`https://www.alfa.srolatino-servers.com/guild/${row.guildName}`}>
+                      <font className={styles.verticalAlign}>
+                        <font className={styles.verticalAlign}>{row.guildName}</font>
+                      </font>
+                    </a>
+                  </p>
+                </li>
+              ))}
             </ul>
           </div>
           {/* RANK PLAYER*/}
