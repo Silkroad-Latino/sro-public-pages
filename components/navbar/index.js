@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from "next/link";
 import styles from "./styles.module.css";
 
 const NavbarComponent = () => {
@@ -49,23 +50,33 @@ const NavbarComponent = () => {
                   <span className={styles.iconBar}/>
                 </button>
                 <div className={styles.logoContainer}>
-                  <a className={`${styles.navbarBrand} ${styles.logo}`} href="https://www.alfa.srolatino-servers.com/"/>
+                  <Link href="/">
+                    <a className={`${styles.navbarBrand} ${styles.logo}`}/>
+                  </Link>
                 </div>
               </div>
 
               <div className={`navbar-collapse collapse ${styles.forceCollapse}`}>
                 <ul className={`${styles.nav} ${styles.navbarNav}`}>
                   <li>
-                    <a href="https://www.alfa.srolatino-servers.com/blog" className={styles.navbarNavA}>Noticias</a>
+                    <Link href="news">
+                      <a className={styles.navbarNavA}>Noticias</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="https://www.alfa.srolatino-servers.com/register" className={styles.navbarNavA}>Registro</a>
+                    <Link href="/register">
+                      <a className={styles.navbarNavA}>Registro</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="https://www.alfa.srolatino-servers.com/community" className={styles.navbarNavA}>Comunidad</a>
+                    <Link href="/community">
+                      <a className={styles.navbarNavA}>Comunidad</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="https://www.alfa.srolatino-servers.com/download" className={styles.navbarNavA}>Descargas</a>
+                    <Link href="/downloads">
+                      <a className={styles.navbarNavA}>Descargas</a>
+                    </Link>
                   </li>
                   <li>
                     <a href="https://sro-latino.com/" className={styles.navbarNavA}>Foro</a>

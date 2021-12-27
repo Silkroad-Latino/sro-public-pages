@@ -45,10 +45,8 @@ const RankingComponent = () => {
                     </font>
                   </span>
 
-                    <a href={`https://www.alfa.srolatino-servers.com/guild/${row.guildName}/_TheZeger__`}>
-                      <font className={styles.verticalAlign}>
-                        dddd
-                      </font>
+                    <a href={`https://www.alfa.srolatino-servers.com/guild/${row.guildName}/${row.charName}`}>
+                      <font className={styles.verticalAlign}>{row.charName}</font>
                     </a>
 
                     <font className={styles.verticalAlign}>
@@ -66,7 +64,6 @@ const RankingComponent = () => {
             </ul>
           </div>
           {/* RANK PLAYER*/}
-
 
           {/* RANK GUILD*/}
           <div className="tab-pane" id="rank2">

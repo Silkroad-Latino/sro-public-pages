@@ -18,9 +18,6 @@ import LoginHomeComponent from "../components/login_home";
 
 export default function Home() {
 
-
-
-
     return (
         <MainLayout>
             <div className="container">

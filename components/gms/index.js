@@ -1,7 +1,11 @@
 import React from 'react';
 import styles from './styles.module.css'
 
+import useGeneralManagerConnect from  "../../hooks/useGeneralManagerConnected"
+
 const GmsComponent = () => {
+
+  const generalManager = useGeneralManagerConnect();
   return (
     <>
       <div className={`${styles.sideBarImgBox} ${styles.fortressWar} ${styles.gmsOnline}`}>
@@ -9,80 +13,21 @@ const GmsComponent = () => {
           <strong>GMs</strong>
           En Linea
         </p>
-
-        <div className={styles.fortress}>
-          <p>
+        {generalManager.map((row, index) => (
+          <div className={styles.fortress} key={`generalManager${index}`}>
+            <p>
             <span
               className={styles.greenCircle} style={{"backgroundColor": "#A7A7A7"}}>
             </span>
-            <span className={styles.gmsName}>
+              <span className={styles.gmsName}>
               <font className={styles.verticalAlign}>
-                <font className={styles.verticalAlign}>
-                  [GM] xMileZ
-                </font>
+                <font className={styles.verticalAlign}>{row.CharName}</font>
               </font>
             </span>
-          </p>
+            </p>
+          </div>
+        ))}
 
-          <p>
-            <span className={styles.greenCircle}
-              style={{"backgroundColor": "#A7A7A7"}}>
-            </span>
-            <span className={styles.gmsName}>
-              <font
-                className={styles.verticalAlign}>
-                <font
-                  className={styles.verticalAlign}>
-                  [GM] Grito
-                </font>
-              </font>
-            </span>
-          </p>
-
-          <p>
-            <span className={styles.greenCircle}></span>
-            <span className={styles.gmsName}>
-              <font className={styles.verticalAlign}>
-                <font className={styles.verticalAlign}>
-                  [GM] Rubia
-                </font>
-              </font>
-            </span>
-          </p>
-
-          <p>
-            <span className={styles.greenCircle}></span>
-            <span className={styles.gmsName}>
-              <font className={styles.verticalAlign}>
-                <font className={styles.verticalAlign}>
-                  [GM] No
-                </font>
-              </font>
-            </span>
-          </p>
-
-          <p>
-            <span className={styles.greenCircle} style={{"backgroundColor": "#A7A7A7"}}></span>
-            <span className={styles.gmsName}>
-              <font className={styles.verticalAlign}>
-                <font className={styles.verticalAlign}>
-                  [GM] Celes
-                </font>
-              </font>
-            </span>
-          </p>
-
-          <p>
-            <span className={styles.greenCircle}></span>
-            <span className={styles.gmsName}>
-                <font className={styles.verticalAlign}>
-                  <font className={styles.verticalAlign}>
-                    [GM] Keila
-                  </font>
-                </font>
-            </span>
-          </p>
-        </div>
       </div>
     </>
   );
