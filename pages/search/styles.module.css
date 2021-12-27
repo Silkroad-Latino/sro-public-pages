@@ -1,0 +1,140 @@
+.newsContainer{
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 50px;
+}
+.titleSearch{
+    width: 100%;
+    margin-left: 30px;
+    margin-top: 80px;
+}
+
+.titleSearch h2{
+    font-family: AdelonMedium,serif;
+    color: #fff;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px #000;
+}
+
+.normalContent {
+    background: #1f252c url(/assets/img/content-top.jpg) top right no-repeat;
+    border: 1px solid #777;
+    border-top: 1px solid #c1b8ad;
+    box-shadow: inset 0 1px 1px #000,0 1px 1px 1px#000;
+    padding-bottom: 40px;
+}
+
+.pageTitle {
+    font-family: AdelonMedium,serif;
+    color: #fff;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px #000;
+}
+
+.pageHeader {
+    border-bottom-color: transparent;
+    margin-top: 20px;
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+}
+
+.inputGroup {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+}
+
+.inputGroupBtn {
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+}
+
+.grunge {
+    border-radius: 0;
+    border: 1px solid #666;
+    border-bottom: 1px solid #555;
+    background-color: #111;
+    color: #777;
+    box-shadow: 0 2px 3px #000, inset 0 0 5px #000;
+    outline: 0;
+}
+
+.inputGroupBtn select {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.inputGroupBtn>.btn {
+    position: relative;
+}
+
+.input-group-addon, .inputGroupBtn {
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.input-group .form-control, .input-group-addon, .inputGroupBtn {
+    display: table-cell;
+}
+
+.grunge.search {
+    background-color: rgba(10,10,10,.6);
+}
+.formControl {
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    background-image: none;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.btnGrunge,
+.btn-grunge:active,
+.btn-grunge:focus,
+.btn-grunge:hover,
+.btn-grunge:target {
+    width: 100%;
+    overflow: hidden;
+    border: none;
+    border-radius: 1px;
+    color: #222228;
+    font-family: AdelonMedium,serif;
+    text-transform: uppercase;
+    text-shadow: 0 1px 3px rgb(255 255 255 / 10%);
+    box-shadow: 0 2px 3px rgb(0 0 0 / 50%);
+    background: url(/assets/img/login-submit.png) 0 -7px repeat-x;
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}

@@ -23,7 +23,6 @@ const EventsComponent = () => {
             </li>
           </ul>
         ))}
-
       </div>
     </>
   );
