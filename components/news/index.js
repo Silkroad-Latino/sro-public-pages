@@ -24,8 +24,7 @@ const NewsComponent = () => {
                   }}/>
                 <a href="https://www.alfa.srolatino-servers.com/blog/updates/06012021-INSPECCION-COMPLETADA-96">
                   <h3 className={styles.listGroupItemHeading}>{row.title}</h3>
-                  <p className={`${styles.listGroupItemText} ${styles.textLeft}`}>{row.content}
-                  </p>
+                  <p className={`${styles.listGroupItemText} ${styles.textLeft}`} dangerouslySetInnerHTML={{__html:row.content}} />
                 </a>
               </div>
             </div>
