@@ -4,7 +4,9 @@ import styles from './styles.module.css'
 const SeekerComponent = () => {
   return (
     <>
-      <form method="POST" action="https://www.alfa.srolatino-servers.com/search">
+      <form
+        method="POST"
+        action="https://www.alfa.srolatino-servers.com/search">
         <div className={styles.inputGroup}>
           <span className={styles.inputGroupBtn}>
             <select rquired="" className={`btn ${styles.grunge}`} name="by">
@@ -23,7 +25,7 @@ const SeekerComponent = () => {
           />
           <span className="input-group-btn">
               <button className={`btn ${styles.btnGrunge}`} type="submit">
-                <span className="glyphicon glyphicon-search"></span>
+                <span className="glyphicon glyphicon-search"/>
               </button>
           </span>
         </div>
