@@ -236,7 +236,6 @@ export default  function  news(){
             <ListGroup/>
           </div>
         </div>
-
       </div>
       <FooterComponent/>
     </div>
