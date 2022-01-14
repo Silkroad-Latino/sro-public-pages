@@ -11,7 +11,7 @@ export default  function  news(){
       <NavbarComponent/>
       <div className="container">
         <div className={styles.titleProfile}>
-          <h2>REFERIDOS</h2>
+          <h2>ACREDITAR E-PIN</h2>
 
           <div className="col-md-12 account-content">
             <div className="row">
