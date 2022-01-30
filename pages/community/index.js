@@ -8,8 +8,53 @@ import styles from './styles.module.css'
 import ListNewsComponent from "../../components/list_news";
 import SeekerComponent from "../../components/seeker";
 import RankingComponent from "../../components/ranking";
+import * as srlApiClient from "../../config/axios";
+import {getUniqueKillRankings} from "../../config/axios";
 
-export default  function  news(){
+export async function getServerSideProps() {
+
+  const news = await srlApiClient.getNews(5)
+    .catch((error) => {
+      console.log("news error: ", error);
+      return [];
+    });
+
+  const playerRankings = await srlApiClient.getPlayerRankings(5)
+    .catch((error) => {
+      console.log("playerRankings error: ", error);
+      return [];
+    });
+
+  const guildRankings = await srlApiClient.getGuildRankings(5)
+    .catch((error) => {
+      console.log("getGuildRankings error: ", error);
+      return [];
+    });
+
+  const uniqueKillRankings = await srlApiClient.getUniqueKillRankings(5)
+    .catch((error) => {
+      console.log("getUniqueKillRankings error: ", error);
+      return [];
+    });
+
+
+
+  return {
+    props: {
+      news,
+      playerRankings,
+      guildRankings,
+      uniqueKillRankings
+    },
+  }
+}
+
+ function CommunityPage ({
+                           news,
+                           playerRankings,
+                           guildRankings,
+                           uniqueKillRankings
+                         }){
   return(
     <div>
       <NavbarComponent/>
@@ -34,7 +79,7 @@ export default  function  news(){
                      className="img-responsive"/>
               </div>
               <h3 className={styles.pageSubtitle}>
-                <span className="glyphicon glyphicon-chevron-right"></span>
+                <span className="glyphicon glyphicon-chevron-right"/>
                 Perfiles de jugadores y gremios
               </h3>
               <div className="row">
@@ -69,13 +114,16 @@ export default  function  news(){
 
               <div className="row">
                 <div className="col-sm-7">
-                  <RankingComponent/>
+                  <RankingComponent
+                    playerRankings={playerRankings}
+                    guildRankings={guildRankings}
+                  />
                 </div>
 
                 <div className="col-sm-5">
-                  <ul id="myTab" className="nav nav-pills sub-spot-title-list">
+                  <ul id="myTab" className={`nav nav-pills ${styles.subSpotTitleList}`}>
                     <li className={styles.subSpotTitle}>
-                      <h4>Ultimo unico asesinados</h4>
+                      <h4>Ultimos unicos asesinados</h4>
                     </li>
                     <li className={`${styles.link} pull-right`}>
                       <a href="https://www.alfa.srolatino-servers.com/community/rankings">Ver todo
@@ -87,56 +135,21 @@ export default  function  news(){
                   </ul>
 
                   <ul className={`mini-rank ${styles.listGroup}`}>
-                    <li className={styles.listGroupItem}>
-                      <p className="">
+                    {uniqueKillRankings.map((row, index) => {
+                      return(
+                        <li className={styles.listGroupItem} key={`uniqueKillRankings-${index}`}>
+                          <p className="">
                         <span
                           className="glyphicon glyphicon-fire">
                         </span>
-                        <span className="badge lv">Flame Slayer</span>
-                        <strong>Asesinado por</strong>
-                        Zz_ROWENA_Zz
-                      </p>
-                    </li>
-                    <li className={styles.listGroupItem}>
-                      <p className="">
-                        <span
-                          className="glyphicon glyphicon-fire">
-                        </span>
-                        <span className="badge lv">Venefica</span>
-                        <strong>Asesinado por</strong>
-                        Zz_ROWENA_Zz
-                      </p>
-                    </li>
-                    <li className={styles.listGroupItem}>
-                      <p className="">
-                        <span
-                          className="glyphicon glyphicon-fire">
-                        </span>
-                        <span className="badge lv">Jupiter(Mega)</span>
-                        <strong>Asesinado por</strong>
-                        __TaKumi_
-                      </p>
-                    </li>
-                    <li className={styles.listGroupItem}>
-                      <p className="">
-                        <span
-                          className="glyphicon glyphicon-fire">
-                        </span>
-                        <span className="badge lv">Tiger Girl</span>
-                        <strong>Asesinado por</strong>
-                        N0_MERCY_
-                      </p>
-                    </li>
-                    <li className={styles.listGroupItem}>
-                      <p className="">
-                        <span
-                          className="glyphicon glyphicon-fire">
-                        </span>
-                        <span className="badge lv">Khulood</span>
-                        <strong>Asesinado por</strong>
-                        LuisitoX_RG4
-                      </p>
-                    </li>
+                            <span className="badge lv">{row.unique}</span>
+                            <strong>Asesinado por</strong>
+                            {row.charName}
+                          </p>
+                        </li>
+                      )
+                    })}
+
                   </ul>
                 </div>
               </div>
@@ -180,7 +193,7 @@ export default  function  news(){
                     <li className="link pull-right">
                       <a href="https://www.alfa.srolatino-servers.com/pictures/upload">
                         Subir imagen
-                        <span className="glyphicon glyphicon-open"></span>
+                        <span className="glyphicon glyphicon-open"/>
                       </a>
                     </li>
                   </ul>
@@ -193,7 +206,9 @@ export default  function  news(){
           </div>
           <div className={`col-md-3 ${styles.listGroupComponent}`}>
             <ListGroup/>
-            <ListNewsComponent/>
+            <ListNewsComponent
+              news={news}
+            />
           </div>
         </div>
       </div>
@@ -201,3 +216,7 @@ export default  function  news(){
     </div>
   )
 }
+
+
+
+export default CommunityPage
