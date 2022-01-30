@@ -2,10 +2,10 @@ import {useState} from 'react'
 
 import styles from './styles.module.css'
 
-import usePlayerRanking from "/hooks/usePlayerRanking";
-import useGuildRankings from "/hooks/useGuildRankings";
-
-const RankingComponent = () => {
+const RankingComponent = ({
+                              playerRankings = [],
+                              guildRankings = [],
+                          }) => {
     const [tab, setTab] = useState("players");
 
     const setTabHandler = (name = "players") => {
@@ -13,9 +13,6 @@ const RankingComponent = () => {
             setTab(name);
         }
     }
-
-    const playerRankings = usePlayerRanking(5);
-    const guildRankings = useGuildRankings(5);
 
     return (
         <>
@@ -55,48 +52,40 @@ const RankingComponent = () => {
                 </ul>
 
                 {/* RANK  CONTAINERS*/}
-                <div id="myTabContent" className="tab-content">
+                <div id="myTabContent" className={`tab-content ${styles.tabContainer}`}>
 
                     {/* RANK PLAYER*/}
                     {tab === "players" && (
                         <div className="tab-pane active" id="rank1">
-                            {playerRankings.isLoading && (
-                                <div className={styles.rankingLoading}>
-                                    Cargando...
-                                </div>
-                            )}
-
-                            {playerRankings.success && (
-                                <ul className={`${styles.miniRank} ${styles.listGroup}`}>
-                                    {playerRankings.data.map((row, index) => (
-                                        <li className={styles.listGroupItem} key={`rankingPlayers${index}`}>
-                                            <p className={styles.listGroupItemHeading}>
+                            <ul className={`${styles.miniRank} ${styles.listGroup}`}>
+                                {playerRankings.map((row, index) => (
+                                    <li className={styles.listGroupItem} key={`rankingPlayers${index}`}>
+                                        <p className={styles.listGroupItemHeading}>
                                                 <span
                                                     className={`${styles.badgeRank} ${styles[`rank${index + 1}`]}`}>1</span>
-                                                <span className={`${styles.badge} ${styles.lv}`}>
+                                            <span className={`${styles.badge} ${styles.lv}`}>
                                                     <font className={styles.verticalAlign}>
                                                       <font className={styles.verticalAlign}>{row.curLevel}</font>
                                                     </font>
                                                 </span>
 
-                                                <a href={`/guild/${row.guildName}/${row.charName}`}>
-                                                    <font className={styles.verticalAlign}>{row.charName}</font>
-                                                </a>
+                                            <a href={`/guild/${row.guildName}/${row.charName}`}>
+                                                <font className={styles.verticalAlign}>{row.charName}</font>
+                                            </a>
 
+                                            <font className={styles.verticalAlign}>
+                                                <font className={styles.verticalAlign}>-</font>
+                                            </font>
+
+                                            <a href={`/guild/${row.guildName}`}>
                                                 <font className={styles.verticalAlign}>
-                                                    <font className={styles.verticalAlign}>-</font>
+                                                    <font className={styles.verticalAlign}>{row.guildName}</font>
                                                 </font>
-
-                                                <a href={`/guild/${row.guildName}`}>
-                                                    <font className={styles.verticalAlign}>
-                                                        <font className={styles.verticalAlign}>{row.guildName}</font>
-                                                    </font>
-                                                </a>
-                                            </p>
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
+                                            </a>
+                                        </p>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     )}
 
@@ -105,38 +94,31 @@ const RankingComponent = () => {
                     {/* RANK GUILD*/}
                     {tab === "clans" && (
                         <div className="tab-pane active" id="rank2">
-                            {guildRankings.isLoading && (
-                                <div className={styles.rankingLoading}>
-                                    Cargando...
-                                </div>
-                            )}
-
-                            {guildRankings.success && (
-                                <ul className={`${styles.miniRank} ${styles.listGroup}`}>
-                                    {guildRankings.data.map((row, index) => (
-                                        <li className={styles.listGroupItem} key={`guildRanking-${index}`}>
-                                            <p className={styles.listGroupItemHeading}
-                                               title={`Total Points: ${row.guildPoints}`}>
-                                                <span className={`${styles.badgeRank} ${styles[`rank${index+1}`]}`}>1</span>
-                                                <span className={`${styles.badge} ${styles.lv}`}>
+                            <ul className={`${styles.miniRank} ${styles.listGroup}`}>
+                                {guildRankings.map((row, index) => (
+                                    <li className={styles.listGroupItem} key={`guildRanking-${index}`}>
+                                        <p className={styles.listGroupItemHeading}
+                                           title={`Total Points: ${row.guildPoints}`}>
+                                                <span
+                                                    className={`${styles.badgeRank} ${styles[`rank${index + 1}`]}`}>1</span>
+                                            <span className={`${styles.badge} ${styles.lv}`}>
                                                     <font className={styles.verticalAlign}>
                                                       <font className={styles.verticalAlign}>Lvl {row.level}</font>
                                                     </font>
                                                 </span>
-                                                <a href={`/guild/${row.name}`}>
-                                                    <font className={styles.verticalAlign}>
-                                                        <font className={styles.verticalAlign}>{row.name}</font>
-                                                    </font>
-                                                </a>
-
+                                            <a href={`/guild/${row.name}`}>
                                                 <font className={styles.verticalAlign}>
-                                                    <font className={styles.verticalAlign}> ({row.guildPoints})</font>
+                                                    <font className={styles.verticalAlign}>{row.name}</font>
                                                 </font>
-                                            </p>
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
+                                            </a>
+
+                                            <font className={styles.verticalAlign}>
+                                                <font className={styles.verticalAlign}> ({row.guildPoints})</font>
+                                            </font>
+                                        </p>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     )}
                     {/* RANK GUILD*/}

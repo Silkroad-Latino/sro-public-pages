@@ -4,13 +4,13 @@ import * as dateHelpers from "../../helpers/dateHelpers"
 import * as stringParserHelpers from "../../helpers/stringParserHelpers"
 
 import styles from './styles.module.css'
-import useMainPageNews from "../../hooks/useMainPageNews"
 
-const NewsComponent = ({limit = 5}) => {
-    const mainNews = useMainPageNews(limit)
+function NewsComponent ({
+                            news= []
+                        }) {
     return (
         <>
-          {mainNews.data.map((row, index) => (
+          {news.map((row, index) => (
             <div className={`col-md-12 ${styles.listGroup} ${styles.news} `} key={`mainNews${index}`}>
               <div className={` col-md-2 ${styles.newsDateHour}`}>
                 <span className={styles.publishDate}>{dateHelpers.toOnlyDate(row.datetime)}</span>
@@ -38,6 +38,6 @@ const NewsComponent = ({limit = 5}) => {
             <div className="clearfix" />
         </>
     );
-};
+}
 
 export default NewsComponent;

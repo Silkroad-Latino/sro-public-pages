@@ -6,9 +6,11 @@ import ListGroup from "../../components/list_group";
 import NewsComponent from "../../components/news";
 import ListNewsComponent from "../../components/list_news";
 
+import * as srlApiClient from "../../config/axios";
+
 import styles from './styles.module.css'
 
-export default function BlogPage() {
+function BlogPage({news}) {
     return (
         <div>
             <NavbarComponent/>
@@ -18,11 +20,11 @@ export default function BlogPage() {
                 </div>
                 <div className={`container ${styles.newsContainer}`}>
                     <div className="col-md-9">
-                        <NewsComponent limit={15}/>
+                        <NewsComponent news={news} />
                     </div>
                     <div className={`col-md-3 ${styles.listGroupComponent}`}>
                         <ListGroup/>
-                        <ListNewsComponent limit={15}/>
+                        <ListNewsComponent news={news}/>
                     <div>
 
                         </div>
@@ -35,3 +37,20 @@ export default function BlogPage() {
         </div>
     )
 }
+
+
+export async function getServerSideProps() {
+    const news = await srlApiClient.getNews(15)
+            .catch((error) => {
+                console.log("getNews error: ", error);
+                return [];
+            });
+
+    return {
+        props: {
+            news
+        },
+    }
+}
+
+export default BlogPage;

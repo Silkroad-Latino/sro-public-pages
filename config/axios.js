@@ -7,4 +7,15 @@ const srlApiClient = axios.create({
   }
 })
 
+
+export const getNews = (limit = 5) => srlApiClient(`/blog/?limit=${limit}`)
+    .then(response => response?.data || []);
+
+export const getPlayerRankings = (limit = 5) => srlApiClient(`/ranking-players?limit=${limit}`)
+    .then(response => response?.data || [])
+
+export const getGuildRankings = (limit = 5) => srlApiClient(`/ranking-guilds?limit=${limit}`)
+    .then(response => response?.data || []);
+
+
 export default srlApiClient;

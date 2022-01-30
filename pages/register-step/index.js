@@ -3,8 +3,6 @@ import React from "react";
 import FooterComponent from "../../components/footer";
 import NavbarComponent from "../../components/navbar";
 import ListGroup from "../../components/list_group";
-import NewsComponent from "../../components/news";
-import ListNewsComponent from "../../components/list_news";
 
 import styles from './styles.module.css'
 import LoginComponent from "../../components/login";

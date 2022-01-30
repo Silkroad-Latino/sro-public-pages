@@ -15,8 +15,14 @@ import ScreenComponent from "../components/screenshots";
 import React from "react";
 import SliderComponent from "../components/slider";
 import LoginHomeComponent from "../components/login_home";
+import * as srlApiClient from "../config/axios";
+import Link from "next/link";
 
-export default function Home() {
+function HomePage({
+                      news,
+                      playerRankings,
+                      guildRankings
+                  }) {
 
     return (
         <MainLayout>
@@ -30,7 +36,10 @@ export default function Home() {
 
                     <div className="col-md-4 col-lg-3 no-padding-all">
 
-                        <RankingComponent/>
+                        <RankingComponent
+                            playerRankings={playerRankings}
+                            guildRankings={guildRankings}
+                        />
 
                     </div>
 
@@ -58,10 +67,12 @@ export default function Home() {
             </div>
             <div className="col-md-7 no-padding-left">
 
-              <NewsComponent/>
+                <NewsComponent news={news}/>
 
                 <div className="col-md-12 no-padding-all">
-                    <a href="/blog" className="btn btn-block btn-grunge-simple" role="button">Mas</a>
+                    <Link href="/blog">
+                        <a className="btn btn-block btn-grunge-simple" >Mas</a>
+                    </Link>
                 </div>
             </div>
             <div className="col-md-3">
@@ -76,3 +87,33 @@ export default function Home() {
         </MainLayout>
     )
 }
+
+export async function getServerSideProps() {
+    const news = await srlApiClient.getNews(5)
+        .catch((error) => {
+            console.log("news error: ", error);
+            return [];
+        });
+
+    const playerRankings = await srlApiClient.getPlayerRankings(5)
+        .catch((error) => {
+            console.log("playerRankings error: ", error);
+            return [];
+        });
+
+    const guildRankings = await srlApiClient.getGuildRankings(5)
+        .catch((error) => {
+            console.log("getGuildRankings error: ", error);
+            return [];
+        });
+
+    return {
+        props: {
+            news,
+            playerRankings,
+            guildRankings
+        },
+    }
+}
+
+export default HomePage

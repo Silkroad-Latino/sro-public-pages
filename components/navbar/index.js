@@ -8,16 +8,14 @@ const NavbarComponent = () => {
       <header className={styles.headerMain}>
         <div className={styles.topBar}>
           <div className="container">
-            <div
-              className={`${styles.pullRight} ${styles.lang}`}
-                >
+            <div className={`${styles.pullRight} ${styles.lang}`}>
               <a href="?lang=en" className={styles.langA}>
                 <font className={styles.verticalAlign}/>
               </a>
 
               <font className={styles.verticalAlign}>
                 <a href="?lang=es" className={`es ${styles.selected}`}>
-                  <font className={styles.verticalAlign}>Español </font>
+                  <font className={styles.verticalAlign}>Español</font>
                 </a>
 
                 <a href="?lang=en" className="en ">
@@ -59,7 +57,7 @@ const NavbarComponent = () => {
               <div className={`navbar-collapse collapse ${styles.forceCollapse}`}>
                 <ul className={`${styles.nav} ${styles.navbarNav}`}>
                   <li>
-                    <Link href="news">
+                    <Link href="/blog">
                       <a className={styles.navbarNavA}>Noticias</a>
                     </Link>
                   </li>

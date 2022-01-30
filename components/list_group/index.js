@@ -1,24 +1,29 @@
 import React from 'react';
+import Link from "next/link";
+
 import styles from './styles.module.css'
 
 const ListGroup = () => {
   return (
     <>
       <div className={`${styles.listGroup} ${styles.lgGrunge}`}>
-        <a href="https://www.alfa.srolatino-servers.com/blog/news"
-           className={styles.listGroupItem}>
-          Noticias
-        </a>
+        <Link href="/blog">
+          <a className={styles.listGroupItem}>
+            Noticias
+          </a>
+        </Link>
 
-        <a href="https://www.alfa.srolatino-servers.com/blog/updates"
-           className={styles.listGroupItem}>
-          Actualizaciones
-        </a>
+        <Link href="/blog/updates">
+          <a className={styles.listGroupItem}>
+            Actualizaciones
+          </a>
+        </Link>
 
-        <a href="https://www.alfa.srolatino-servers.com/blog/events"
-           className={styles.listGroupItem}>
-          Eventos
-        </a>
+        <Link href="/blog/events">
+          <a className={styles.listGroupItem}>
+            Eventos
+          </a>
+        </Link>
       </div>
     </>
   );
