@@ -1,152 +1,149 @@
-import {useContext} from "react";
+import {useState} from 'react'
+
 import styles from './styles.module.css'
 
-import useRankingPlayers from "/hooks/useRankingPlayers";
+import usePlayerRanking from "/hooks/usePlayerRanking";
+import useGuildRankings from "/hooks/useGuildRankings";
 
 const RankingComponent = () => {
-  const rankingPlayers = useRankingPlayers(5);
+    const [tab, setTab] = useState("players");
 
-  return (
-    <>
-      <div className={styles.rankTabs}>
-        <ul id="myTab" className={`nav nav-pills ${styles.subSpotTitleList}`}>
-          <li className={styles.subSpotTitle}>
-            <h4>
-              Rankings
-              <a href="https://www.alfa.srolatino-servers.com/community/rankings">
-                <small>
-                  <span className={`${styles.glyphicon} glyphicon-new-window`}/>
-                </small>
-              </a>
-            </h4>
-          </li>
-          <ul className={`nav ${styles.navTabs} ${styles.navTabsGrunge}  pull-right`}>
-            <li className={styles.active}>
-              <a href="#rank1" data-toggle="tab" className={styles.a}>Jugadores</a>
-            </li>
-            <li>
-              <a href="#rank2" data-toggle="tab">Clanes</a>
-            </li>
-          </ul>
-        </ul>
-        {/* RANK  CONTAINERS*/}
-        <div id="myTabContent" className="tab-content">
+    const setTabHandler = (name = "players") => {
+        if (tab === "players" || tab === "clans") {
+            setTab(name);
+        }
+    }
 
-          {/* RANK PLAYER*/}
-          <div className="tab-pane active" id="rank1">
-            <ul className={`${styles.miniRank} ${styles.listGroup}`}>
-              {rankingPlayers.map((row, index) => (
-                <li className={styles.listGroupItem} key={`rankingPlayers${index}`}>
-                  <p className={styles.listGroupItemHeading}>
-                    <span className={`${styles.badgeRank} ${styles[`rank${index+1}`]}`}>1</span>
-                    <span className={`${styles.badge} ${styles.lv}`}>
-                    <font className={styles.verticalAlign}>
-                      <font className={styles.verticalAlign}>{row.curLevel}</font>
-                    </font>
-                  </span>
+    const playerRankings = usePlayerRanking(5);
+    const guildRankings = useGuildRankings(5);
 
-                    <a href={`https://www.alfa.srolatino-servers.com/guild/${row.guildName}/${row.charName}`}>
-                      <font className={styles.verticalAlign}>{row.charName}</font>
-                    </a>
+    return (
+        <>
+            <div className={styles.rankTabs}>
+                <ul id="myTab" className={`nav nav-pills ${styles.subSpotTitleList}`}>
+                    <li className={styles.subSpotTitle}>
+                        <h4>
+                            Rankings
+                            <a href="https://www.alfa.srolatino-servers.com/community/rankings">
+                                <small>
+                                    <span className={`${styles.glyphicon} glyphicon-new-window`}/>
+                                </small>
+                            </a>
+                        </h4>
+                    </li>
 
-                    <font className={styles.verticalAlign}>
-                      <font className={styles.verticalAlign}>-</font>
-                    </font>
+                    <ul className={`nav ${styles.navTabs} ${styles.navTabsGrunge}  pull-right`}>
+                        <li className={styles.active}>
+                            <a
+                                onClick={() => setTabHandler("players")}
+                                data-toggle="tab"
+                                className={`${tab === "players" && styles.tabOption}`}
+                            >
+                                Jugadores
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                className={`${tab === "clans" && styles.tabOption}`}
+                                onClick={() => setTabHandler("clans")}
+                                data-toggle="tab"
+                            >
+                                Clanes
+                            </a>
+                        </li>
+                    </ul>
+                </ul>
 
-                    <a href={`https://www.alfa.srolatino-servers.com/guild/${row.guildName}`}>
-                      <font className={styles.verticalAlign}>
-                        <font className={styles.verticalAlign}>{row.guildName}</font>
-                      </font>
-                    </a>
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </div>
-          {/* RANK PLAYER*/}
+                {/* RANK  CONTAINERS*/}
+                <div id="myTabContent" className="tab-content">
 
-          {/* RANK GUILD*/}
-          <div className="tab-pane" id="rank2">
-            <ul className={`${styles.miniRank} ${styles.listGroup}`}>
-              <li className={styles.listGroupItem}>
-                <p className={styles.listGroupItemHeading}
-                   title="Total Points: 1,861,572">
-                  <span className={`${styles.badgeRank} ${styles.rank1}`}>1</span>
-                  <span className={`${styles.badge} ${styles.lv}`}>
-                    <font className={styles.verticalAlign}>
-                      <font className={styles.verticalAlign}>Nivel 5</font>
-                    </font>
-                  </span>
-                  <a href="https://www.alfa.srolatino-servers.com/guild/AnGeLs_DeMoN">
-                    <font className={styles.verticalAlign}>
-                      <font className={styles.verticalAlign}>AnGeLs_DeMoN</font>
-                    </font>
-                  </a>
+                    {/* RANK PLAYER*/}
+                    {tab === "players" && (
+                        <div className="tab-pane active" id="rank1">
+                            {playerRankings.isLoading && (
+                                <div className={styles.rankingLoading}>
+                                    Cargando...
+                                </div>
+                            )}
 
-                  <font className={styles.verticalAlign}>
-                    <font className={styles.verticalAlign}> (798,252,815)</font>
-                  </font>
-                </p>
-              </li>
-              <li className={styles.listGroupItem}>
-                <p className={styles.listGroupItemHeading}
-                   title="Total Points: 1,721,249">
-                  <span className={`${styles.badgeRank} ${styles.rank2}`}>2</span>
-                  <span className={`${styles.badge} ${styles.lv}`}>
-                                <font className={styles.verticalAlign}>
-                                  <font className={styles.verticalAlign}>Nivel 5</font>
-                                </font>
-                              </span>
+                            {playerRankings.success && (
+                                <ul className={`${styles.miniRank} ${styles.listGroup}`}>
+                                    {playerRankings.data.map((row, index) => (
+                                        <li className={styles.listGroupItem} key={`rankingPlayers${index}`}>
+                                            <p className={styles.listGroupItemHeading}>
+                                                <span
+                                                    className={`${styles.badgeRank} ${styles[`rank${index + 1}`]}`}>1</span>
+                                                <span className={`${styles.badge} ${styles.lv}`}>
+                                                    <font className={styles.verticalAlign}>
+                                                      <font className={styles.verticalAlign}>{row.curLevel}</font>
+                                                    </font>
+                                                </span>
 
-                  <a href="https://www.alfa.srolatino-servers.com/guild/InsertGuild">
-                    <font className={styles.verticalAlign}>
-                      <font className={styles.verticalAlign}>InsertGuild</font>
-                    </font>
-                  </a>
-                  <font className={styles.verticalAlign}>
-                    <font className={styles.verticalAlign}> (5.214.658)</font>
-                  </font>
-                </p>
-              </li>
-              <li className={styles.listGroupItem}>
-                <p className={styles.listGroupItemHeading}
-                   title="Total Points: 1,541,862">
-                  <span className={`${styles.badgeRank} ${styles.rank3}`}>3</span>
-                  <span className={`${styles.badge} ${styles.lv}`}>
-                                <font className={styles.verticalAlign}>
-                                  <font className={styles.verticalAlign}>Nivel 5</font>
-                                </font>
-                              </span>
-                  <a href="https://www.alfa.srolatino-servers.com/guild/Thiefs4Life">Thiefs4Life</a>
-                  (151,260,947)
-                </p>
-              </li>
-              <li className={styles.listGroupItem}>
-                <p className={styles.listGroupItemHeading}
-                   title="Total Points: 1,497,106">
-                  <span className={`${styles.badgeRank} ${styles.rank4}`}>4</span>
-                  <span className={`${styles.badge} ${styles.lv}`}>Lv 5</span>
-                  <a href="https://www.alfa.srolatino-servers.com/guild/WrathOfGods">WrathOfGods</a>
-                  (793,424,909)
-                </p>
-              </li>
-              <li className={styles.listGroupItem}>
-                <p className={styles.listGroupItemHeading}
-                   title="Total Points: 1,375,168">
-                  <span className={`${styles.badgeRank} ${styles.rank5}`}>5</span>
-                  <span className={`${styles.badge} ${styles.lv}`}>Lv 5</span>
-                  <a href="https://www.alfa.srolatino-servers.com/guild/LatinNarcos">LatinNarcos</a>
-                  (811,049,773)
-                </p>
-              </li>
-            </ul>
-          </div>
-          {/* RANK GUILD*/}
+                                                <a href={`/guild/${row.guildName}/${row.charName}`}>
+                                                    <font className={styles.verticalAlign}>{row.charName}</font>
+                                                </a>
 
-        </div>
-      </div>
-    </>
-  );
+                                                <font className={styles.verticalAlign}>
+                                                    <font className={styles.verticalAlign}>-</font>
+                                                </font>
+
+                                                <a href={`/guild/${row.guildName}`}>
+                                                    <font className={styles.verticalAlign}>
+                                                        <font className={styles.verticalAlign}>{row.guildName}</font>
+                                                    </font>
+                                                </a>
+                                            </p>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                        </div>
+                    )}
+
+                    {/* RANK PLAYER*/}
+
+                    {/* RANK GUILD*/}
+                    {tab === "clans" && (
+                        <div className="tab-pane active" id="rank2">
+                            {guildRankings.isLoading && (
+                                <div className={styles.rankingLoading}>
+                                    Cargando...
+                                </div>
+                            )}
+
+                            {guildRankings.success && (
+                                <ul className={`${styles.miniRank} ${styles.listGroup}`}>
+                                    {guildRankings.data.map((row, index) => (
+                                        <li className={styles.listGroupItem} key={`guildRanking-${index}`}>
+                                            <p className={styles.listGroupItemHeading}
+                                               title={`Total Points: ${row.guildPoints}`}>
+                                                <span className={`${styles.badgeRank} ${styles[`rank${index+1}`]}`}>1</span>
+                                                <span className={`${styles.badge} ${styles.lv}`}>
+                                                    <font className={styles.verticalAlign}>
+                                                      <font className={styles.verticalAlign}>Lvl {row.level}</font>
+                                                    </font>
+                                                </span>
+                                                <a href={`/guild/${row.name}`}>
+                                                    <font className={styles.verticalAlign}>
+                                                        <font className={styles.verticalAlign}>{row.name}</font>
+                                                    </font>
+                                                </a>
+
+                                                <font className={styles.verticalAlign}>
+                                                    <font className={styles.verticalAlign}> ({row.guildPoints})</font>
+                                                </font>
+                                            </p>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                        </div>
+                    )}
+                    {/* RANK GUILD*/}
+                </div>
+            </div>
+        </>
+    );
 };
 
 export default RankingComponent;

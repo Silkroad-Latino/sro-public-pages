@@ -1,30 +1,33 @@
 import React from 'react';
 
+import * as dateHelpers from "../../helpers/dateHelpers"
+import * as stringParserHelpers from "../../helpers/stringParserHelpers"
+
 import styles from './styles.module.css'
 import useMainPageNews from "../../hooks/useMainPageNews"
 
-const NewsComponent = () => {
-  const mainNews = useMainPageNews(5)
+const NewsComponent = ({limit = 5}) => {
+    const mainNews = useMainPageNews(limit)
     return (
         <>
-          {mainNews.map((row, index) => (
+          {mainNews.data.map((row, index) => (
             <div className={`col-md-12 ${styles.listGroup} ${styles.news} `} key={`mainNews${index}`}>
               <div className={` col-md-2 ${styles.newsDateHour}`}>
-                <span className={styles.publishDate}>{row.datetime}</span>
-                <span className={`publish-tag ${styles.textUp}`}>Actualizaciones</span>
+                <span className={styles.publishDate}>{dateHelpers.toOnlyDate(row.datetime)}</span>
               </div>
 
-
-              <div className={`col-md-10 ${styles.listGroupItem}`}>
+              <div className={`col-md-12 ${styles.listGroupItem}`}>
                 <div
                   className={`col-md-12 ${styles.image}`}
-                  data-bg="url(/assets/img/2.png)"
-                  style={{
-                    "backgroundImage": "url(/assets/img/2.png"
-                  }}/>
-                <a href="https://www.alfa.srolatino-servers.com/blog/updates/06012021-INSPECCION-COMPLETADA-96">
+                  data-bg={`url(${row.cover})`}
+                  style={{"backgroundImage": `url(${row.cover})`}}/>
+                <a href={`/blog/updates/${stringParserHelpers.toNewsUrl(row.title, row.id)}`}>
                   <h3 className={styles.listGroupItemHeading}>{row.title}</h3>
-                  <p className={`${styles.listGroupItemText} ${styles.textLeft}`} dangerouslySetInnerHTML={{__html:row.content}} />
+                  <p className={`${styles.listGroupItemText} ${styles.textLeft}`}>
+                      {stringParserHelpers.cutString(
+                          stringParserHelpers.ignoreHtmlTags(row.content)
+                      )}
+                  </p>
                 </a>
               </div>
             </div>

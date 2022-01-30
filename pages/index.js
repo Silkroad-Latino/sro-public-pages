@@ -61,8 +61,7 @@ export default function Home() {
               <NewsComponent/>
 
                 <div className="col-md-12 no-padding-all">
-                    <a href="https://www.alfa.srolatino-servers.com/blog"
-                       className="btn btn-block btn-grunge-simple" role="button">Mas</a>
+                    <a href="/blog" className="btn btn-block btn-grunge-simple" role="button">Mas</a>
                 </div>
             </div>
             <div className="col-md-3">

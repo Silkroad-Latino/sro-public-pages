@@ -42,6 +42,7 @@
 
 .navTabsGrunge a{
     margin-top: 12px;
+    cursor: pointer;
 }
 
 .navTabsGrunge li .active a {
@@ -63,7 +64,7 @@
     color: #c1b8ad;
 }
 
-.a {
+.tabOption {
     height: 35px;
     display: block;
     position: relative;
@@ -83,7 +84,7 @@
     text-decoration: none;
 }
 
-.a:hover{
+.tabOption:hover{
     color: black !important;
 }
 
@@ -155,4 +156,12 @@
     background: transparent url(/assets/img/medals-sprite.png) center top;
     background-position: center -83px;
     color: transparent;
+}
+
+.rankingLoading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
 }
