@@ -1,7 +1,7 @@
 import React from "react";
 
-import FooterComponent from "../../components/footer";
-import NavbarComponent from "../../components/navbar";
+import FooterComponent from "../../../components/footer";
+import NavbarComponent from "../../../components/navbar";
 
 import styles from './styles.module.css'
 
@@ -11,7 +11,7 @@ export default  function  news(){
       <NavbarComponent/>
       <div className="container">
         <div className={styles.titleProfile}>
-          <h2>ACREDITAR E-PIN</h2>
+          <h2>REESTABLECER HABILIDADES 100%</h2>
 
           <div className="col-md-12 account-content">
             <div className="row">
@@ -227,67 +227,60 @@ export default  function  news(){
 
             <div className={`row ${styles.containerTab}`}>
               <div className="col-md-8">
-                <ul id="myTab" className={`nav ${styles.navPills} ${styles.subSpotTitleList} ${styles.marginTop}`}>
+                <ul
+                  id="myTab"
+                  className={`nav ${styles.navPills} ${styles.subSpotTitleList} ${styles.marginTop}`}>
                   <li className={styles.subSpotTitle}>
-                    <h4>Resumen de saldo</h4>
+                    <h4>RESTABLECER HABILIDADES</h4>
                   </li>
                 </ul>
+
                 <div className={`${styles.panel} ${styles.panelGrunge} ${styles.marginTop}`}>
                   <div className={styles.panelBody}>
-                    <p className="text-right">Tu saldo </p>
-                    <h2 className="pull-right">
-                      $ 0.00 <small>USD</small>
-                    </h2>
-                    <div className="clearfix"/>
-                    <strong className="pull-right">
-                      0 <small> Creditos</small>
-                    </strong>
-                    <p/>
+                    <form method="POST" action="">
+                      <table className={`${styles.table} table-referrals}`}>
+                        <tbody>
+                        <tr>
+                          <td> Seleccionar Personaje</td>
+                          <td>
+                            <select required="required" name="pj">
+                              <option disabled="" selected="selected" value="">Seleccionar Personaje</option>
+                              <option value="_HiT_HarD">_HiT_HarD</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td/>
+                          <td>
+                            <br/><br/>
+                            <div
+                              className={`${styles.alert} ${styles.alertWarning} alert-dismissible}`}
+                              role="alert">
+                              <button
+                                type="button"
+                                className={styles.close}
+                                data-dismiss="alert"
+                                aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                              </button>
+
+                              <h5 align="center" className="alert_warning">
+                                <strong>NOTA:</strong>
+                              </h5>
+                              <br/>
+                              Tienes que estar desconectado del juego, para poder realizar este proceso.
+                              <br/>
+                              Solo se restauraran los SPs consumidos.<br/>
+                              El reinicio de los skills tienen un valor de 800 Creditos<br/>
+                              Usted tiene 0 Creditos
+                            </div>
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </form>
                   </div>
                 </div>
-                <ul id="myTab" className={`nav ${styles.navPills} ${styles.subSpotTitleList} ${styles.marginTop}`}>
-                  <li className={styles.subSpotTitle}>
-                    <h4>Actividad Reciente</h4>
-                  </li>
-                  <ul
-                    className="nav nav-tabs nav-tabs-grunge pull-right hide"
-                    id="filters">
-                    <li>
-                      <a href="#" id="">All Transactions</a>
-                    </li>
-                    <li>
-                      <a href="#" id="charge">Cargar</a>
-                    </li>
-                    <li>
-                      <a href="#" id="buy">Comprar</a>
-                    </li>
-                  </ul>
-                </ul>
-                <table className="table table-referrals table-condensed margin-top">
-                  <colgroup>
-                    <col width="99"/>
-                      <col width="*"/>
-                        <col width="262"/>
-                  </colgroup>
-                  <thead>
-                  <tr>
-                    <th>
-                      <div>Tipo</div>
-                    </th>
-                    <th>
-                      <div>Fecha</div>
-                    </th>
-                    <th>
-                      <div>Descripcion</div>
-                    </th>
-                    <th className="text-right">
-                      <div/>
-                    </th>
-                  </tr>
-                  </thead>
-                  <tbody id="actContent">
-                  </tbody>
-                </table>
               </div>
               <div className={`col-md-4 ${styles.marginTop}`}>
                 <div className={styles.cornerBox}>
@@ -295,66 +288,29 @@ export default  function  news(){
                   <ul className={styles.listUnStyled}>
                     <li>
                       <strong>USD:</strong>
-                      <span className="pull-right">
-                        0.00
-                      </span>
+                      <span className="pull-right">0.00</span>
                     </li>
+
                     <li>
                       <strong>Creditos:</strong>
                       <span className="pull-right">
                         <img src="https://www.alfa.srolatino-servers.com/assets/images/credits.gif" alt=""/>
-                          0
-                        </span>
-                      </li>
-
+                          0 </span>
+                    </li>
                   </ul>
 
-                  <a href="https://www.alfa.srolatino-servers.com/profile/charge"
-                     className={`btn  ${styles.btnBlock}  ${styles.btnGrunge} ${styles.marginTop}`}>Cargar</a>
+                  <a
+                    href="https://www.alfa.srolatino-servers.com/profile/charge"
+                    className={`btn  ${styles.btnBlock}  ${styles.btnGrunge} ${styles.marginTop}`}>
+                    Cargar
+                  </a>
+
                   <span className={`${styles.corner} ${styles.tl}`}/>
                   <span className={`${styles.corner} ${styles.tr}`}/>
                   <span className={`${styles.corner} ${styles.bl}`}/>
                   <span className={`${styles.corner} ${styles.br}`}/>
                   <br/>
                 </div>
-                <br/>
-                  <div className={styles.cornerBox}>
-                    <h4>Resellers</h4>
-                    <a
-                      target="_blank"
-                      href="http://weargamers.com/"
-                      className={`btn  ${styles.btnBlock}  ${styles.btnGrunge} ${styles.marginTop}`}>
-                      WeArGamers (Argentina/BTC/WU)
-                    </a>
-
-                    <a
-                      target="_blank"
-                      href="http://www.easygameitems.com/ "
-                      className={`btn  ${styles.btnBlock}  ${styles.btnGrunge} ${styles.marginTop}`}>
-                      Easy Game Items (Colombia)
-                    </a>
-
-                    <a
-                      target="_blank"
-                      href="https://www.facebook.com/servivenet/"
-                      className={`btn  ${styles.btnBlock}  ${styles.btnGrunge} ${styles.marginTop}`}>
-                      Servivenet (Venezuela/Chile/Mexico)
-                    </a>
-
-                    <a
-                      target="_blank"
-                      href="http://knight-reseller.silkroadlatino.com/"
-                      className={`btn  ${styles.btnBlock}  ${styles.btnGrunge} ${styles.marginTop}`}>
-                      Knight Rougue (Peru)
-                    </a>
-
-
-                    <span className={`${styles.corner} ${styles.tl}`}/>
-                    <span className={`${styles.corner} ${styles.tr}`}/>
-                    <span className={`${styles.corner} ${styles.bl}`}/>
-                    <span className={`${styles.corner} ${styles.br}`}/>
-                    <br/>
-                  </div>
               </div>
             </div>
           </div>

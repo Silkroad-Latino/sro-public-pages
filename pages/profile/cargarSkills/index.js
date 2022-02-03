@@ -1,7 +1,7 @@
 import React from "react";
 
-import FooterComponent from "../../components/footer";
-import NavbarComponent from "../../components/navbar";
+import FooterComponent from "../../../components/footer";
+import NavbarComponent from "../../../components/navbar";
 
 import styles from './styles.module.css'
 
@@ -11,7 +11,7 @@ export default  function  news(){
       <NavbarComponent/>
       <div className="container">
         <div className={styles.titleProfile}>
-          <h2>REFERIDOS</h2>
+          <h2>CARGAR SKILL POINTS</h2>
 
           <div className="col-md-12 account-content">
             <div className="row">
@@ -225,71 +225,93 @@ export default  function  news(){
               </li>
             </ul>
 
-              <div className={`row ${styles.containerTab}`}>
-                <div className="col-md-8">
-                  <ul id="myTab" className={`nav ${styles.navPills} ${styles.subSpotTitleList} ${styles.marginTop}`}>
-                    <li className={styles.subSpotTitle}>
-                      <h4>Mis Referidos</h4>
-                    </li>
-                  </ul>
-                  <div className={`${styles.panel} ${styles.panelGrunge} ${styles.marginTop}`}>
-                    <div className={styles.panelBody}>
-                      <p>
-                        Tu link de referidos: <br/>
-                        <br/>
-                        <kbd>https://www.alfa.srolatino-servers.com/register?r=NDI3ODIy</kbd>
-                        <br/>
-                        <br/>
-                        <strong>Tu ganas un 2% Por cada cargo</strong>
-                      </p>
-                    </div>
-                  </div>
+            <div className={`row ${styles.containerTab}`}>
+              <div className="col-md-8">
+                <ul
+                  id="myTab"
+                  className={`nav ${styles.navPills} ${styles.subSpotTitleList} ${styles.marginTop}`}>
+                  <li className={styles.subSpotTitle}>
+                    <h4>Cargar Skill Points (400 Creditos)</h4>
+                  </li>
+                </ul>
 
-                  <ul id="myTab" className={`nav ${styles.navPills}  ${styles.marginTop}`}>
-                    <li className={styles.subSpotTitle}>
-                      <h4>Ultimas referencias</h4>
-                    </li>
-                  </ul>
-                  <br/>
-                    <table className="table table-referrals table-condensed">
-                      <colgroup>
-                        <col width="99"/>
-                          <col width="*"/>
-                            <col width="262"/>
-                      </colgroup>
-                      <thead>
+                <div className={`${styles.panel} ${styles.panelGrunge} ${styles.marginTop}`}>
+                  <div className={styles.panelBody}>
+                    <form method="POST" action="">
+                      <table className={`${styles.table} table-referrals}`}>
+                        <tbody>
                         <tr>
-                          <th>
-                            <div>#</div>
-                          </th>
-                          <th>
-                            <div>Referido</div>
-                          </th>
-                          <th>
-                            <div>Fecha de registro</div>
-                          </th>
+                          <td> Seleccionar Personaje</td>
+                          <td>
+                            <select required="required" name="pj">
+                              <option disabled="" selected="selected" value="">Seleccionar Personaje</option>
+                              <option value="_HiT_HarD">_HiT_HarD</option>
+                          </select>
+                          </td>
                         </tr>
-                      </thead>
-                    </table>
-                    <strong>Total de referidos: 0</strong>
-                </div>
-                <div className={`col-md-4 ${styles.marginTop}`}>
-                  <div className={styles.cornerBox}>
-                    <h4>Compartir en Facebook:</h4>
-                    <p>Click in the button below to share yout referral link in Facebook</p>
-                    <a target="_blank"
-                       href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.alfa.srolatino-servers.com%2Fregister%3Fr%3DNDI3ODIy"
-                       className={`btn ${styles.btnGrunge} btn-grunge-fb`}>
-                      Compartir en Facebook
-                    </a>
-                    <span className={`${styles.corner} ${styles.tl}`}/>
-                    <span className={`${styles.corner} ${styles.tr}`}/>
-                    <span className={`${styles.corner} ${styles.bl}`}/>
-                    <span className={`${styles.corner} ${styles.br}`}/>
-                    <br/>
+                        <tr>
+                          <td/>
+                          <td>
+                            <br/><br/>
+                              <div
+                                className={`${styles.alert} ${styles.alertWarning} alert-dismissible}`}
+                                role="alert">
+                                <button
+                                  type="button"
+                                  className={styles.close}
+                                  data-dismiss="alert"
+                                  aria-label="Close">
+                                  <span aria-hidden="true">×</span>
+                                </button>
+
+                                <h5 align="center" className="alert_warning">
+                                  <strong>NOTA:</strong>
+                                </h5>
+                                <br/>
+                                Tienes que estar desconectado del juego, para poder realizar este proceso.
+                                <br/>
+                                Recargar 1.000.000 de SPs tiene un valor de 400 Creditos <br/>
+                                Usted tiene 0 Creditos
+                              </div>
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </form>
                   </div>
                 </div>
               </div>
+              <div className={`col-md-4 ${styles.marginTop}`}>
+                <div className={styles.cornerBox}>
+                  <h4>Cargar Saldo</h4>
+                  <ul className={styles.listUnStyled}>
+                    <li>
+                      <strong>USD:</strong>
+                      <span className="pull-right">0.00</span>
+                    </li>
+
+                    <li>
+                      <strong>Creditos:</strong>
+                      <span className="pull-right">
+                        <img src="https://www.alfa.srolatino-servers.com/assets/images/credits.gif" alt=""/>
+                          0 </span>
+                      </li>
+                  </ul>
+
+                  <a
+                    href="https://www.alfa.srolatino-servers.com/profile/charge"
+                    className={`btn  ${styles.btnBlock}  ${styles.btnGrunge} ${styles.marginTop}`}>
+                    Cargar
+                  </a>
+
+                  <span className={`${styles.corner} ${styles.tl}`}/>
+                  <span className={`${styles.corner} ${styles.tr}`}/>
+                  <span className={`${styles.corner} ${styles.bl}`}/>
+                  <span className={`${styles.corner} ${styles.br}`}/>
+                  <br/>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

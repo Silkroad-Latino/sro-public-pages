@@ -1,7 +1,7 @@
 import React from "react";
 
-import FooterComponent from "../../components/footer";
-import NavbarComponent from "../../components/navbar";
+import FooterComponent from "../../../components/footer";
+import NavbarComponent from "../../../components/navbar";
 
 import styles from './styles.module.css'
 
@@ -11,7 +11,7 @@ export default  function  news(){
       <NavbarComponent/>
       <div className="container">
         <div className={styles.titleProfile}>
-          <h2>CARGAR SKILL POINTS</h2>
+          <h2>REESTABLECER HABILIDADES 50%</h2>
 
           <div className="col-md-12 account-content">
             <div className="row">
@@ -231,7 +231,7 @@ export default  function  news(){
                   id="myTab"
                   className={`nav ${styles.navPills} ${styles.subSpotTitleList} ${styles.marginTop}`}>
                   <li className={styles.subSpotTitle}>
-                    <h4>Cargar Skill Points (400 Creditos)</h4>
+                    <h4>RESTABLECER HABILIDADES</h4>
                   </li>
                 </ul>
 
@@ -246,33 +246,34 @@ export default  function  news(){
                             <select required="required" name="pj">
                               <option disabled="" selected="selected" value="">Seleccionar Personaje</option>
                               <option value="_HiT_HarD">_HiT_HarD</option>
-                          </select>
+                            </select>
                           </td>
                         </tr>
                         <tr>
                           <td/>
                           <td>
                             <br/><br/>
-                              <div
-                                className={`${styles.alert} ${styles.alertWarning} alert-dismissible}`}
-                                role="alert">
-                                <button
-                                  type="button"
-                                  className={styles.close}
-                                  data-dismiss="alert"
-                                  aria-label="Close">
-                                  <span aria-hidden="true">×</span>
-                                </button>
+                            <div
+                              className={`${styles.alert} ${styles.alertWarning} alert-dismissible}`}
+                              role="alert">
+                              <button
+                                type="button"
+                                className={styles.close}
+                                data-dismiss="alert"
+                                aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                              </button>
 
-                                <h5 align="center" className="alert_warning">
-                                  <strong>NOTA:</strong>
-                                </h5>
-                                <br/>
-                                Tienes que estar desconectado del juego, para poder realizar este proceso.
-                                <br/>
-                                Recargar 1.000.000 de SPs tiene un valor de 400 Creditos <br/>
-                                Usted tiene 0 Creditos
-                              </div>
+                              <h5 align="center" className="alert_warning">
+                                <strong>NOTA:</strong>
+                              </h5>
+                              <br/>
+                              Tienes que estar desconectado del juego, para poder realizar este proceso.
+                              <br/>
+                              Solo se restauraran los SPs consumidos.<br/>
+                              El reinicio de los skills tienen un valor de 400 Creditos<br/>
+                              Usted tiene 0 Creditos
+                            </div>
                           </td>
                         </tr>
                         </tbody>
@@ -295,7 +296,7 @@ export default  function  news(){
                       <span className="pull-right">
                         <img src="https://www.alfa.srolatino-servers.com/assets/images/credits.gif" alt=""/>
                           0 </span>
-                      </li>
+                    </li>
                   </ul>
 
                   <a

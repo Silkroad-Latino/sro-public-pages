@@ -1,7 +1,7 @@
 import React from "react";
 
-import FooterComponent from "../../components/footer";
-import NavbarComponent from "../../components/navbar";
+import FooterComponent from "../../../components/footer";
+import NavbarComponent from "../../../components/navbar";
 
 import styles from './styles.module.css'
 
@@ -11,7 +11,7 @@ export default  function  news(){
       <NavbarComponent/>
       <div className="container">
         <div className={styles.titleProfile}>
-          <h2>CARGAR SKILL POINTS</h2>
+          <h2>ACREDITAR E-PIN</h2>
 
           <div className="col-md-12 account-content">
             <div className="row">
@@ -42,6 +42,7 @@ export default  function  news(){
                 </div>
               </div>
             </div>
+
             <div className="clearfix"/>
             <ul className={`nav ${styles.navTabs} ${styles.navTabsGrunge} ${styles.marginTop}`}>
               <li className="active">
@@ -67,6 +68,8 @@ export default  function  news(){
                   </li>
                 </ul>
               </li>
+
+
               <li className="dropdown dd-grunge">
                 <a
                   className="dropdown-toggle"
@@ -117,6 +120,8 @@ export default  function  news(){
 
                 </ul>
               </li>
+
+
               <li className="dropdown dd-grunge">
                 <a
                   className="dropdown-toggle"
@@ -167,6 +172,7 @@ export default  function  news(){
                   />
                 </ul>
               </li>
+
               <li className="">
                 <a
                   href="https://www.alfa.srolatino-servers.com/profile/referrals">
@@ -218,76 +224,137 @@ export default  function  news(){
                 </ul>
               </li>
             </ul>
+
             <div className={`row ${styles.containerTab}`}>
-              <div className={`col-md-8 ${styles.itemGroup} ${styles.marginTop}`}>
-                <h3 className={styles.pageSubtitle}>
-                  <span className={`${styles.glyphicon} glyphicon-chevron-right}`}/>
-                  Cambiar mi correo electronico
-                </h3>
-                <div className="frame-inner">
-                  <form role="form" method="POST">
-                    <div className={`${styles.formGroup} narrow}`}>
-                      <label htmlFor="password">Clave</label>
-                      <input
-                        required=""
-                        type="password"
-                        name="password"
-                        className={`${styles.formControl} ${styles.grunge}`}
-                        placeholder="Contraseña actual"/>
-                        <span className="endbtn"/>
-                    </div>
-                    <div className="form-group narrow">
-                      <label htmlFor="answer">Clave secreta</label>
-                      <input
-                        required=""
-                        type="text"
-                        name="answer"
-                        className={`${styles.formControl} ${styles.grunge}`}
-                        placeholder="Pregunta secreta"/>
-                        <span className="endbtn"/>
-                    </div>
-
-                    <div className="form-group narrow">
-                      <label htmlFor="new_email">Nuevo Email</label>
-                      <input
-                        required=""
-                        type="email"
-                        name="new_email"
-                        className={` ${styles.formControl} ${styles.grunge}`}
-                        placeholder="Nuevo Email"/>
-                        <span className="endbtn"/>
-                    </div>
-
-                    <br/>
-                      <button
-                        type="submit"
-                        className={`btn ${styles.btnGrunge}`}>
-                        Actualizar mi correo
-                      </button>
-                  </form>
+              <div className="col-md-8">
+                <ul id="myTab" className={`nav ${styles.navPills} ${styles.subSpotTitleList} ${styles.marginTop}`}>
+                  <li className={styles.subSpotTitle}>
+                    <h4>Resumen de saldo</h4>
+                  </li>
+                </ul>
+                <div className={`${styles.panel} ${styles.panelGrunge} ${styles.marginTop}`}>
+                  <div className={styles.panelBody}>
+                    <p className="text-right">Tu saldo </p>
+                    <h2 className="pull-right">
+                      $ 0.00 <small>USD</small>
+                    </h2>
+                    <div className="clearfix"/>
+                    <strong className="pull-right">
+                      0 <small> Creditos</small>
+                    </strong>
+                    <p/>
+                  </div>
                 </div>
-
+                <ul id="myTab" className={`nav ${styles.navPills} ${styles.subSpotTitleList} ${styles.marginTop}`}>
+                  <li className={styles.subSpotTitle}>
+                    <h4>Actividad Reciente</h4>
+                  </li>
+                  <ul
+                    className="nav nav-tabs nav-tabs-grunge pull-right hide"
+                    id="filters">
+                    <li>
+                      <a href="#" id="">All Transactions</a>
+                    </li>
+                    <li>
+                      <a href="#" id="charge">Cargar</a>
+                    </li>
+                    <li>
+                      <a href="#" id="buy">Comprar</a>
+                    </li>
+                  </ul>
+                </ul>
+                <table className="table table-referrals table-condensed margin-top">
+                  <colgroup>
+                    <col width="99"/>
+                      <col width="*"/>
+                        <col width="262"/>
+                  </colgroup>
+                  <thead>
+                  <tr>
+                    <th>
+                      <div>Tipo</div>
+                    </th>
+                    <th>
+                      <div>Fecha</div>
+                    </th>
+                    <th>
+                      <div>Descripcion</div>
+                    </th>
+                    <th className="text-right">
+                      <div/>
+                    </th>
+                  </tr>
+                  </thead>
+                  <tbody id="actContent">
+                  </tbody>
+                </table>
               </div>
               <div className={`col-md-4 ${styles.marginTop}`}>
                 <div className={styles.cornerBox}>
-                  <h4>Importante</h4>
-                  <br/>
-                    El sistema le enviara un correo electronico de confirmacion antes de actualizar este.
-                    <div className={`${styles.separatorBox} ${styles.marginTop}`}/>
+                  <h4>Cargar Saldo</h4>
+                  <ul className={styles.listUnStyled}>
+                    <li>
+                      <strong>USD:</strong>
+                      <span className="pull-right">
+                        0.00
+                      </span>
+                    </li>
+                    <li>
+                      <strong>Creditos:</strong>
+                      <span className="pull-right">
+                        <img src="https://www.alfa.srolatino-servers.com/assets/images/credits.gif" alt=""/>
+                          0
+                        </span>
+                      </li>
 
+                  </ul>
+
+                  <a href="https://www.alfa.srolatino-servers.com/profile/charge"
+                     className={`btn  ${styles.btnBlock}  ${styles.btnGrunge} ${styles.marginTop}`}>Cargar</a>
+                  <span className={`${styles.corner} ${styles.tl}`}/>
+                  <span className={`${styles.corner} ${styles.tr}`}/>
+                  <span className={`${styles.corner} ${styles.bl}`}/>
+                  <span className={`${styles.corner} ${styles.br}`}/>
+                  <br/>
+                </div>
+                <br/>
+                  <div className={styles.cornerBox}>
+                    <h4>Resellers</h4>
                     <a
-                      href="https://www.alfa.srolatino-servers.com/profile/"
-                      className={`btn ${styles.btnBlock} ${styles.btnGrunge} ${styles.marginTop}`}>
-                      Ir a mi perfil
+                      target="_blank"
+                      href="http://weargamers.com/"
+                      className={`btn  ${styles.btnBlock}  ${styles.btnGrunge} ${styles.marginTop}`}>
+                      WeArGamers (Argentina/BTC/WU)
                     </a>
 
-                    <div className={` ${styles.separatorBox} ${styles.marginTop}`}/>
+                    <a
+                      target="_blank"
+                      href="http://www.easygameitems.com/ "
+                      className={`btn  ${styles.btnBlock}  ${styles.btnGrunge} ${styles.marginTop}`}>
+                      Easy Game Items (Colombia)
+                    </a>
+
+                    <a
+                      target="_blank"
+                      href="https://www.facebook.com/servivenet/"
+                      className={`btn  ${styles.btnBlock}  ${styles.btnGrunge} ${styles.marginTop}`}>
+                      Servivenet (Venezuela/Chile/Mexico)
+                    </a>
+
+                    <a
+                      target="_blank"
+                      href="http://knight-reseller.silkroadlatino.com/"
+                      className={`btn  ${styles.btnBlock}  ${styles.btnGrunge} ${styles.marginTop}`}>
+                      Knight Rougue (Peru)
+                    </a>
+
+
                     <span className={`${styles.corner} ${styles.tl}`}/>
                     <span className={`${styles.corner} ${styles.tr}`}/>
                     <span className={`${styles.corner} ${styles.bl}`}/>
                     <span className={`${styles.corner} ${styles.br}`}/>
                     <br/>
-                </div>
+                  </div>
               </div>
             </div>
           </div>

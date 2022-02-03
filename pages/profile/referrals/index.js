@@ -1,7 +1,7 @@
 import React from "react";
 
-import FooterComponent from "../../components/footer";
-import NavbarComponent from "../../components/navbar";
+import FooterComponent from "../../../components/footer";
+import NavbarComponent from "../../../components/navbar";
 
 import styles from './styles.module.css'
 
@@ -11,7 +11,7 @@ export default  function  news(){
       <NavbarComponent/>
       <div className="container">
         <div className={styles.titleProfile}>
-          <h2>CARGAR SKILL POINTS</h2>
+          <h2>REFERIDOS</h2>
 
           <div className="col-md-12 account-content">
             <div className="row">
@@ -42,6 +42,7 @@ export default  function  news(){
                 </div>
               </div>
             </div>
+
             <div className="clearfix"/>
             <ul className={`nav ${styles.navTabs} ${styles.navTabsGrunge} ${styles.marginTop}`}>
               <li className="active">
@@ -67,6 +68,8 @@ export default  function  news(){
                   </li>
                 </ul>
               </li>
+
+
               <li className="dropdown dd-grunge">
                 <a
                   className="dropdown-toggle"
@@ -117,6 +120,8 @@ export default  function  news(){
 
                 </ul>
               </li>
+
+
               <li className="dropdown dd-grunge">
                 <a
                   className="dropdown-toggle"
@@ -167,6 +172,7 @@ export default  function  news(){
                   />
                 </ul>
               </li>
+
               <li className="">
                 <a
                   href="https://www.alfa.srolatino-servers.com/profile/referrals">
@@ -219,92 +225,71 @@ export default  function  news(){
               </li>
             </ul>
 
-            <div className={`row ${styles.containerTab}`}>
-              <div className={`col-md-8 item-group ${styles.marginTop}`}>
-                <h3 className={styles.pageSubtitle}>
-                  <span className={`${styles.glyphicon} glyphicon-chevron-right}`}/>
-                  Actualizar mi clave
-                </h3>
-                <div className="frame-inner">
-                  <form role="form" method="POST">
-                    <div className="form-group narrow">
-                      <label htmlFor="password">Contraseña actual</label>
-                      <input
-                        required=""
-                        type="password"
-                        name="password"
-                        className={`${styles.formControl} ${styles.grunge}`}
-                        placeholder="Contraseña actual"/>
-                        <span className="endbtn"/>
+              <div className={`row ${styles.containerTab}`}>
+                <div className="col-md-8">
+                  <ul id="myTab" className={`nav ${styles.navPills} ${styles.subSpotTitleList} ${styles.marginTop}`}>
+                    <li className={styles.subSpotTitle}>
+                      <h4>Mis Referidos</h4>
+                    </li>
+                  </ul>
+                  <div className={`${styles.panel} ${styles.panelGrunge} ${styles.marginTop}`}>
+                    <div className={styles.panelBody}>
+                      <p>
+                        Tu link de referidos: <br/>
+                        <br/>
+                        <kbd>https://www.alfa.srolatino-servers.com/register?r=NDI3ODIy</kbd>
+                        <br/>
+                        <br/>
+                        <strong>Tu ganas un 2% Por cada cargo</strong>
+                      </p>
                     </div>
-                    <div className="form-group narrow">
-                      <label htmlFor="answer">Clave secreta</label>
-                      <input
-                        required=""
-                        type="text"
-                        name="answer"
-                        className={`${styles.formControl} ${styles.grunge}`}
-                        placeholder="Pregunta secreta"/>
-                      <span className="endbtn"/>
-                    </div>
+                  </div>
 
-                    <div className="form-group narrow">
-                      <label htmlFor="new_password1">Nueva clave</label>
-                      <input
-                        required=""
-                        type="password"
-                        name="new_password1"
-                        className={`${styles.formControl} ${styles.grunge}`}
-                        placeholder="Nueva clave"/>
-                      <span className="endbtn"/>
-                    </div>
-
-                    <div className="form-group narrow">
-                      <label htmlFor="new_password2">Repetir nueva clave</label>
-                      <input
-                        required=""
-                        type="password"
-                        name="new_password2"
-                        className={`${styles.formControl} ${styles.grunge}`}
-                        placeholder="Repetir nueva clave"/>
-                        <span className="endbtn"/>
-                    </div>
-
-                    <br/>
-                      <button
-                        type="submit"
-                        className={`btn ${styles.btnGrunge}`}>
-                        Actualizar mi clave
-                      </button>
-                  </form>
-                </div>
-              </div>
-              <div className={`col-md-4 ${styles.marginTop}`}>
-                <div className={styles.cornerBox}>
-                  <h4>Recomendaciones de contraseña</h4>
+                  <ul id="myTab" className={`nav ${styles.navPills}  ${styles.marginTop}`}>
+                    <li className={styles.subSpotTitle}>
+                      <h4>Ultimas referencias</h4>
+                    </li>
+                  </ul>
                   <br/>
-                    <ul>
-                      <li>Min 5 caracteres</li>
-                      <li>Max 15 caracteres</li>
-                      <li>No utilizar espacios en blanco</li>
-                    </ul>
-                    <div className={`${styles.separatorBox} ${styles.marginTop}`}/>
-
-                    <a
-                      href="https://www.alfa.srolatino-servers.com/profile/"
-                      className={`btn ${styles.btnBlock} ${styles.btnGrunge} ${styles.marginTop}`}>
-                      Ir a mi perfi
+                    <table className="table table-referrals table-condensed">
+                      <colgroup>
+                        <col width="99"/>
+                          <col width="*"/>
+                            <col width="262"/>
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>
+                            <div>#</div>
+                          </th>
+                          <th>
+                            <div>Referido</div>
+                          </th>
+                          <th>
+                            <div>Fecha de registro</div>
+                          </th>
+                        </tr>
+                      </thead>
+                    </table>
+                    <strong>Total de referidos: 0</strong>
+                </div>
+                <div className={`col-md-4 ${styles.marginTop}`}>
+                  <div className={styles.cornerBox}>
+                    <h4>Compartir en Facebook:</h4>
+                    <p>Click in the button below to share yout referral link in Facebook</p>
+                    <a target="_blank"
+                       href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.alfa.srolatino-servers.com%2Fregister%3Fr%3DNDI3ODIy"
+                       className={`btn ${styles.btnGrunge} btn-grunge-fb`}>
+                      Compartir en Facebook
                     </a>
-
-                    <div className={`${styles.separatorBox} ${styles.marginTop}`}/>
                     <span className={`${styles.corner} ${styles.tl}`}/>
                     <span className={`${styles.corner} ${styles.tr}`}/>
                     <span className={`${styles.corner} ${styles.bl}`}/>
                     <span className={`${styles.corner} ${styles.br}`}/>
                     <br/>
+                  </div>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </div>

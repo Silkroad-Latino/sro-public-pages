@@ -1,7 +1,7 @@
 import React from "react";
 
-import FooterComponent from "../../components/footer";
-import NavbarComponent from "../../components/navbar";
+import FooterComponent from "../../../components/footer";
+import NavbarComponent from "../../../components/navbar";
 
 import styles from './styles.module.css'
 
@@ -11,7 +11,7 @@ export default  function  news(){
       <NavbarComponent/>
       <div className="container">
         <div className={styles.titleProfile}>
-          <h2>REESTABLECER HABILIDADES 50%</h2>
+          <h2>RESTABLECER PUNTOS DEL PERSONAJE</h2>
 
           <div className="col-md-12 account-content">
             <div className="row">
@@ -231,7 +231,7 @@ export default  function  news(){
                   id="myTab"
                   className={`nav ${styles.navPills} ${styles.subSpotTitleList} ${styles.marginTop}`}>
                   <li className={styles.subSpotTitle}>
-                    <h4>RESTABLECER HABILIDADES</h4>
+                    <h4>RESTABLECER PUNTOS DEL PERSONAJE</h4>
                   </li>
                 </ul>
 
@@ -270,8 +270,7 @@ export default  function  news(){
                               <br/>
                               Tienes que estar desconectado del juego, para poder realizar este proceso.
                               <br/>
-                              Solo se restauraran los SPs consumidos.<br/>
-                              El reinicio de los skills tienen un valor de 400 Creditos<br/>
+                              Reestablecer los puntos del personaje tiene un valor de 800 Creditos<br/>
                               Usted tiene 0 Creditos
                             </div>
                           </td>

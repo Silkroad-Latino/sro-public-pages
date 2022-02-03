@@ -1,7 +1,7 @@
 import React from "react";
 
-import FooterComponent from "../../components/footer";
-import NavbarComponent from "../../components/navbar";
+import FooterComponent from "../../../components/footer";
+import NavbarComponent from "../../../components/navbar";
 
 import styles from './styles.module.css'
 
@@ -11,7 +11,7 @@ export default  function  news(){
       <NavbarComponent/>
       <div className="container">
         <div className={styles.titleProfile}>
-          <h2>REMOVE PK</h2>
+          <h2>CARGAR SKILL POINTS</h2>
 
           <div className="col-md-12 account-content">
             <div className="row">
@@ -42,7 +42,6 @@ export default  function  news(){
                 </div>
               </div>
             </div>
-
             <div className="clearfix"/>
             <ul className={`nav ${styles.navTabs} ${styles.navTabsGrunge} ${styles.marginTop}`}>
               <li className="active">
@@ -68,8 +67,6 @@ export default  function  news(){
                   </li>
                 </ul>
               </li>
-
-
               <li className="dropdown dd-grunge">
                 <a
                   className="dropdown-toggle"
@@ -120,8 +117,6 @@ export default  function  news(){
 
                 </ul>
               </li>
-
-
               <li className="dropdown dd-grunge">
                 <a
                   className="dropdown-toggle"
@@ -172,7 +167,6 @@ export default  function  news(){
                   />
                 </ul>
               </li>
-
               <li className="">
                 <a
                   href="https://www.alfa.srolatino-servers.com/profile/referrals">
@@ -226,89 +220,88 @@ export default  function  news(){
             </ul>
 
             <div className={`row ${styles.containerTab}`}>
-              <div className="col-md-8">
-                <ul
-                  id="myTab"
-                  className={`nav ${styles.navPills} ${styles.subSpotTitleList} ${styles.marginTop}`}>
-                  <li className={styles.subSpotTitle}>
-                    <h4>REMOVER PK</h4>
-                  </li>
-                </ul>
+              <div className={`col-md-8 item-group ${styles.marginTop}`}>
+                <h3 className={styles.pageSubtitle}>
+                  <span className={`${styles.glyphicon} glyphicon-chevron-right}`}/>
+                  Actualizar mi clave
+                </h3>
+                <div className="frame-inner">
+                  <form role="form" method="POST">
+                    <div className="form-group narrow">
+                      <label htmlFor="password">Contraseña actual</label>
+                      <input
+                        required=""
+                        type="password"
+                        name="password"
+                        className={`${styles.formControl} ${styles.grunge}`}
+                        placeholder="Contraseña actual"/>
+                        <span className="endbtn"/>
+                    </div>
+                    <div className="form-group narrow">
+                      <label htmlFor="answer">Clave secreta</label>
+                      <input
+                        required=""
+                        type="text"
+                        name="answer"
+                        className={`${styles.formControl} ${styles.grunge}`}
+                        placeholder="Pregunta secreta"/>
+                      <span className="endbtn"/>
+                    </div>
 
-                <div className={`${styles.panel} ${styles.panelGrunge} ${styles.marginTop}`}>
-                  <div className={styles.panelBody}>
-                    <form method="POST" action="">
-                      <table className={`${styles.table} table-referrals}`}>
-                        <tbody>
-                        <tr>
-                          <td> Seleccionar Personaje</td>
-                          <td>
-                            <select required="required" name="pj">
-                              <option disabled="" selected="selected" value="">Seleccionar Personaje</option>
-                              <option value="_HiT_HarD">_HiT_HarD</option>
-                            </select>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td/>
-                          <td>
-                            <br/><br/>
-                            <div
-                              className={`${styles.alert} ${styles.alertWarning} alert-dismissible}`}
-                              role="alert">
-                              <button
-                                type="button"
-                                className={styles.close}
-                                data-dismiss="alert"
-                                aria-label="Close">
-                                <span aria-hidden="true">×</span>
-                              </button>
+                    <div className="form-group narrow">
+                      <label htmlFor="new_password1">Nueva clave</label>
+                      <input
+                        required=""
+                        type="password"
+                        name="new_password1"
+                        className={`${styles.formControl} ${styles.grunge}`}
+                        placeholder="Nueva clave"/>
+                      <span className="endbtn"/>
+                    </div>
 
-                              <h5 align="center" className="alert_warning">
-                                <strong>NOTA:</strong>
-                              </h5>
-                              <br/>
-                              Tienes que estar desconectado del juego, para poder realizar este proceso.
-                              <br/>
-                              El Remover PK del personaje tiene un costo de 35 Creditos <br/>
-                              Usted tiene 0 Creditos
-                            </div>
-                          </td>
-                        </tr>
-                        </tbody>
-                      </table>
-                    </form>
-                  </div>
+                    <div className="form-group narrow">
+                      <label htmlFor="new_password2">Repetir nueva clave</label>
+                      <input
+                        required=""
+                        type="password"
+                        name="new_password2"
+                        className={`${styles.formControl} ${styles.grunge}`}
+                        placeholder="Repetir nueva clave"/>
+                        <span className="endbtn"/>
+                    </div>
+
+                    <br/>
+                      <button
+                        type="submit"
+                        className={`btn ${styles.btnGrunge}`}>
+                        Actualizar mi clave
+                      </button>
+                  </form>
                 </div>
               </div>
               <div className={`col-md-4 ${styles.marginTop}`}>
                 <div className={styles.cornerBox}>
-                  <h4>Cargar Saldo</h4>
-                  <ul className={styles.listUnStyled}>
-                    <li>
-                      <strong>USD:</strong>
-                      <span className="pull-right">0.00</span>
-                    </li>
-
-                    <li>
-                      <strong>Creditos:</strong>
-                      <span className="pull-right">
-                        <img src="https://www.alfa.srolatino-servers.com/assets/images/credits.gif" alt=""/>
-                          0 </span>
-                    </li>
-                  </ul>
-
-                  <a
-                    href="https://www.alfa.srolatino-servers.com/profile/charge"
-                    className={`btn  ${styles.btnBlock}  ${styles.btnGrunge} ${styles.marginTop}`}>
-                    Cargar
-                  </a>
-
-                  <span className={`${styles.corner} ${styles.tl}`}/>
-                  <span className={`${styles.corner} ${styles.tr}`}/>
-                  <span className={`${styles.corner} ${styles.bl}`}/>
-                  <span className={`${styles.corner} ${styles.br}`}/>
+                  <h4>Recomendaciones de contraseña</h4>
                   <br/>
+                    <ul>
+                      <li>Min 5 caracteres</li>
+                      <li>Max 15 caracteres</li>
+                      <li>No utilizar espacios en blanco</li>
+                    </ul>
+                    <div className={`${styles.separatorBox} ${styles.marginTop}`}/>
+
+                    <a
+                      href="https://www.alfa.srolatino-servers.com/profile/"
+                      className={`btn ${styles.btnBlock} ${styles.btnGrunge} ${styles.marginTop}`}>
+                      Ir a mi perfi
+                    </a>
+
+                    <div className={`${styles.separatorBox} ${styles.marginTop}`}/>
+                    <span className={`${styles.corner} ${styles.tl}`}/>
+                    <span className={`${styles.corner} ${styles.tr}`}/>
+                    <span className={`${styles.corner} ${styles.bl}`}/>
+                    <span className={`${styles.corner} ${styles.br}`}/>
+                    <br/>
                 </div>
               </div>
             </div>

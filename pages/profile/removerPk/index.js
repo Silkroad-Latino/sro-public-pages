@@ -1,7 +1,7 @@
 import React from "react";
 
-import FooterComponent from "../../components/footer";
-import NavbarComponent from "../../components/navbar";
+import FooterComponent from "../../../components/footer";
+import NavbarComponent from "../../../components/navbar";
 
 import styles from './styles.module.css'
 
@@ -11,7 +11,7 @@ export default  function  news(){
       <NavbarComponent/>
       <div className="container">
         <div className={styles.titleProfile}>
-          <h2>ACREDITAR E-PIN</h2>
+          <h2>REMOVE PK</h2>
 
           <div className="col-md-12 account-content">
             <div className="row">
@@ -227,62 +227,88 @@ export default  function  news(){
 
             <div className={`row ${styles.containerTab}`}>
               <div className="col-md-8">
-                <ul id="myTab" className={`nav ${styles.navPills} ${styles.subSpotTitleList} ${styles.marginTop}`}>
+                <ul
+                  id="myTab"
+                  className={`nav ${styles.navPills} ${styles.subSpotTitleList} ${styles.marginTop}`}>
                   <li className={styles.subSpotTitle}>
-                    <h4>Su E-pin (Creditos)</h4>
+                    <h4>REMOVER PK</h4>
                   </li>
                 </ul>
-                <div className="row">
-                </div>
-                <ul id="myTab" className={`nav ${styles.navPills} ${styles.subSpotTitleList} ${styles.marginTop}`}>
-                  <li className={styles.subSpotTitle}>
-                    <h4>Su E-pin (Puntos de Habilidad)</h4>
-                  </li>
-                </ul>
-                <div className="row">
+
+                <div className={`${styles.panel} ${styles.panelGrunge} ${styles.marginTop}`}>
+                  <div className={styles.panelBody}>
+                    <form method="POST" action="">
+                      <table className={`${styles.table} table-referrals}`}>
+                        <tbody>
+                        <tr>
+                          <td> Seleccionar Personaje</td>
+                          <td>
+                            <select required="required" name="pj">
+                              <option disabled="" selected="selected" value="">Seleccionar Personaje</option>
+                              <option value="_HiT_HarD">_HiT_HarD</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td/>
+                          <td>
+                            <br/><br/>
+                            <div
+                              className={`${styles.alert} ${styles.alertWarning} alert-dismissible}`}
+                              role="alert">
+                              <button
+                                type="button"
+                                className={styles.close}
+                                data-dismiss="alert"
+                                aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                              </button>
+
+                              <h5 align="center" className="alert_warning">
+                                <strong>NOTA:</strong>
+                              </h5>
+                              <br/>
+                              Tienes que estar desconectado del juego, para poder realizar este proceso.
+                              <br/>
+                              El Remover PK del personaje tiene un costo de 35 Creditos <br/>
+                              Usted tiene 0 Creditos
+                            </div>
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </form>
+                  </div>
                 </div>
               </div>
               <div className={`col-md-4 ${styles.marginTop}`}>
                 <div className={styles.cornerBox}>
-                  <h4>Saldo</h4>
+                  <h4>Cargar Saldo</h4>
                   <ul className={styles.listUnStyled}>
                     <li>
                       <strong>USD:</strong>
                       <span className="pull-right">0.00</span>
                     </li>
+
                     <li>
                       <strong>Creditos:</strong>
                       <span className="pull-right">
                         <img src="https://www.alfa.srolatino-servers.com/assets/images/credits.gif" alt=""/>
                           0 </span>
-                      </li>
-
+                    </li>
                   </ul>
+
+                  <a
+                    href="https://www.alfa.srolatino-servers.com/profile/charge"
+                    className={`btn  ${styles.btnBlock}  ${styles.btnGrunge} ${styles.marginTop}`}>
+                    Cargar
+                  </a>
+
                   <span className={`${styles.corner} ${styles.tl}`}/>
                   <span className={`${styles.corner} ${styles.tr}`}/>
                   <span className={`${styles.corner} ${styles.bl}`}/>
                   <span className={`${styles.corner} ${styles.br}`}/>
                   <br/>
-
-
-                    <a
-                      href="https://www.alfa.srolatino-servers.com/profile/balance"
-                      className={`btn ${styles.btnBlock}  ${styles.btnGrunge} ${styles.marginTop}`}>
-                      Ir al saldo de la cuenta
-                    </a>
-
-                    <a
-                      href="https://www.alfa.srolatino-servers.com/profile/buyEpin"
-                      className={`btn ${styles.btnBlock}  ${styles.btnGrunge} ${styles.marginTop}`}>
-                      Comprar E-pin
-                    </a>
-
-                    <div className={`${styles.separatorBox} ${styles.marginTop}`}/>
-                    <span className="corner tl"/>
-                    <span className="corner tr"/>
-                    <span className="corner bl"/>
-                    <span className="corner br"/>
-                    <br/>
                 </div>
               </div>
             </div>
