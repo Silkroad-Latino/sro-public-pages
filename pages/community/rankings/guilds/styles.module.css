@@ -1,0 +1,220 @@
+.newsCommunity{
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 50px;
+}
+.titleCommunity{
+    width: 100%;
+    margin-left: 30px;
+    margin-top: 80px;
+}
+
+.titleCommunity h2{
+    font-family: AdelonMedium,serif;
+    color: #fff;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px #000;
+    margin-bottom: -20px;
+}
+
+.listGroupComponent{
+    margin-top: 10px;
+}
+
+.normalContent {
+    background: #1f252c url(/assets/img/content-top.jpg) top right no-repeat;
+    border: 1px solid #777;
+    border-top: 1px solid #c1b8ad;
+    box-shadow: inset 0 1px 1px #000,0 1px 1px 1px#000;
+    padding-bottom: 40px;
+}
+
+.breadcrumb {
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.breadcrumb.grunge {
+    color: #777777;
+    background: 0 0;
+    box-shadow: none;
+    font-size: 11px;
+    border-radius: 0 0 5px 0;
+    background: rgba(0,0,0,.5);
+    border: 0;
+    text-align: left;
+    float: left;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    border-top: 1px solid rgba(0,0,0,.9);
+    padding: 5px 10px;
+}
+
+.breadcrumb>li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.breadcrumb li a:hover{
+    color: #a5a5a5;
+    text-decoration: none;
+}
+
+.breadcrumb>.active {
+    color: #999;
+}
+
+.pageSubtitle {
+    font-size: 18px;
+    color: #c1b8ad;
+    position: relative;
+}
+.socialLinkBg {
+    border: 1px solid #555;
+    overflow: hidden;
+    margin: 0 auto 12px;
+    border-radius: 0;
+    box-shadow: 0 0 6px #000;
+    width: 100%;
+    padding: 4px 5px;
+}
+
+.socialLinkBg span {
+    line-height: 24px;
+}
+.socialLinkBg a {
+    margin-right: 5px;
+}
+
+.separator {
+    height: 150px;
+    width: 100%;
+    background: #1f252c url(/assets/img/subspot_bg.jpg) center top no-repeat;
+    margin: 15px 0 -150px;
+    border-top: 1px solid #000;
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.subSpotTitle{
+    color: #b8b1aa;
+    font-family: AdelonMedium,serif;
+    text-transform: uppercase;
+    border-bottom: 1px solid #b8b1aa;
+    margin-top: 3px;
+}
+
+.subSpotTitle h4{
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.link a{
+    font-size: 12px;
+    display: block;
+}
+
+.link a:hover{
+    color: #777777;
+    background-color: transparent !important;
+}
+
+.listGroup{
+    list-style: none;
+    padding: 0 0;
+}
+
+.listGroupItem{
+    margin-bottom: 2px;
+    background: 0 0;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px dotted rgba(0,0,0,.4);
+    padding: 1px 1px 7px;
+    width: 100%;
+    float: left;
+}
+
+.listGroupItem p{
+    font-size: 10px;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+}
+
+.tableRankings>thead>tr {
+    font-weight: 700;
+    text-shadow: 0 2px 1px #000;
+    color: #fff;
+    border-bottom: 1px solid #777;
+}
+
+.rank1 {
+    background: transparent url(/assets/img/medals-sprite.png) center top;
+    background-position: center -2px;
+    color: transparent;
+}
+
+.rank2 {
+    background: transparent url(/assets/img/medals-sprite.png) center top;
+    background-position: center -28px;
+    color: transparent;
+}
+
+.rank3 {
+    background: transparent url(/assets/img/medals-sprite.png) center top;
+    background-position: center -56px;
+    color: transparent;
+}
+
+.badgeRank {
+    width: 22px;
+    height: 22px;
+    border-radius: 0;
+    font-size: 11px;
+    padding: 0;
+    margin-right: 5px;
+    display: inline-block;
+    line-height: 24px;
+}
+
+.tableRankings>tbody>tr {
+    border-bottom: 1px solid #181818 !important;
+}
+
+.tableRankings>tbody>tr>td {
+    border-top: 0;
+    padding: 12px 5px;
+    vertical-align: middle;
+}
+
+.textCenter {
+    text-align: center;
+}

@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const srlApiClient = axios.create({
-  baseURL: 'http://7f32-181-170-232-176.ngrok.io/',
+  baseURL: 'http://localhost:3030',
   headers: {
     'content-type': 'application/json',
   }
@@ -11,7 +11,7 @@ const srlApiClient = axios.create({
 export const getNews = (limit = 5) => srlApiClient(`/blog/?limit=${limit}`)
     .then(response => response?.data || []);
 
-export const getPlayerRankings = (limit = 5) => srlApiClient(`/ranking-players?limit=${limit}`)
+export const getPlayerRankings = (limit = 30) => srlApiClient(`/ranking-players?limit=${limit}`)
     .then(response => response?.data || [])
 
 export const getGuildRankings = (limit = 5) => srlApiClient(`/ranking-guilds?limit=${limit}`)
@@ -19,6 +19,7 @@ export const getGuildRankings = (limit = 5) => srlApiClient(`/ranking-guilds?lim
 
 export const getUniqueKillRankings = (limit = 5) => srlApiClient(`/ranking/unique?limit=${limit}`)
   .then(response => response?.data || []);
+
 
 
 export default srlApiClient;
